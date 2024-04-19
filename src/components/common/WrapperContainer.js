@@ -1,10 +1,20 @@
 import React from "react";
-import { Header,Contanier } from "components/common";
+import { Header,Slider,Values,Clients,Soon,News,Footer} from "components/common";
+import styled from "styled-components";
+
+
+
 export function WrapperContainer(){
     return(
         <>
          <Header/>
-         <Contanier/>
+         <Slider/>
+         <Values/>
+         <Clients/>
+         <Soon/>
+         <News/>
+         <Footer/>
+
       </>
     )
 }
