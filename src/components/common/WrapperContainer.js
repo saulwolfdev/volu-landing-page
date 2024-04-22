@@ -13,10 +13,10 @@ const Contanier=styled.div`
                            "containersoon"
                            "containernews"
                            "containerfooter";
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px 2fr 1fr 1fr 1fr 1fr auto;
         
 `;
- const ContanierHeader=styled.div`
+ const ContanierHeader=styled.header`
  width: 100%;
  height: 100%;
  background-color:red;
@@ -47,14 +47,13 @@ background-color:aliceblue;
   background-color:aqua;
 grid-area: containernews; 
  `;
- const ContanierFooter=styled.div`
+ const ContanierFooter=styled.footer`
    background-color:tomato;
 grid-area: containerfooter; 
  
  `;
 export function WrapperContainer(){
     return(
-        
         <Contanier>
             <ContanierHeader>
                     <Header/>
@@ -71,12 +70,12 @@ export function WrapperContainer(){
          <ContanierSoon>
                     <Soon/>
          </ContanierSoon>
-        <ContanierNews>
-                <News/>
-        </ContanierNews>
-        <ContanierFooter>
-                <Footer/>
-        </ContanierFooter>
+          <ContanierNews>
+                  <News/>
+          </ContanierNews>
+          <ContanierFooter>
+                  <Footer/>
+          </ContanierFooter>
       </Contanier>
     )
 }
