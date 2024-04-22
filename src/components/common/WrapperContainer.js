@@ -19,32 +19,40 @@ const Contanier=styled.div`
  const ContanierHeader=styled.header`
  width: 100%;
  height: 100%;
- background-color:red;
+ background-color:#F8F9FF;
  grid-area: contanierheader;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-bottom: 1px solid black;
+
+
  `;
  const ContanierSlider=styled.div`
- background-color:yellow;
- grid-area: contanierslider; 
+ //background-color:yellow;
+ grid-area: contanierslider;
+
+ 
  `;
 
 
-  const ContanierValues=styled.div`
-background-color:green;
+  const ContanierValues=styled.section`
+//background-color:green;
  grid-area: containerclients; 
   `;
 
 
  const ContanierClients=styled.div`
-background-color:orange;
+//background-color:orange;
  grid-area: containervalues; 
  
  `;
  const ContanierSoon=styled.div`
-background-color:aliceblue;
+//background-color:aliceblue;
  grid-area: containersoon; 
  `;
  const ContanierNews=styled.div`
-  background-color:aqua;
+  //background-color:aqua;
 grid-area: containernews; 
  `;
  const ContanierFooter=styled.footer`
