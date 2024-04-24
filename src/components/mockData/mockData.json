@@ -3,8 +3,10 @@
         "id": "header1",
         "logo": {
           "id": "logo1",
-          "svgPath": "../assets/Logo.svg",
-          "altText": "Logo de Volu."
+          "logoPath": "Logo.svg",
+          "iconPath": "RocketLaunch.svg",
+          "altTextLogo": "Logo Volu",
+          "altTextRocket": "icon Rocket"
         },
         "menu": {
           "id": "menu1",
@@ -19,12 +21,14 @@
           {
             "id": "button1",
             "text": "Registrarse",
-            "color": "primary"
+            "color": "secondary",
+            "size": "lg"
           },
           {
             "id": "button2",
             "text": "Comenzar",
-            "color": "secondary"
+            "color": "primary",
+            "size": "lg"           
           }
         ]
       },

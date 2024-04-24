@@ -1,46 +1,58 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const BaseButton = styled.button.attrs(props => ({  
+export const BaseButton = styled.button.attrs((props) => ({
   outline: undefined,
 }))`
-  display: inline-block;
-  padding: 8px 16px; 
-  font-size: 16px; 
-  border-radius: 4px; 
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  align-content: center;
   text-align: center;
-  text-decoration: none;
-  border: none;
+  border-radius: 20px;
+  border: 0;
+  cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 
-  ${({ color }) => color === 'primary' && `
-    background-color: #007bff;
+  ${({ color }) =>
+    color === "primary" &&
+    `
+    background-color: #009379;
     color: #fff;
   `}
-  ${({ color }) => color === 'secondary' && `
+  ${({ color }) =>
+    color === "secondary" &&
+    `
     background-color: #6c757d;
     color: #fff;
   `}
 
-  ${({ outline }) => outline ? `  
+  ${({ outline }) =>
+    outline
+      ? `  
     background-color: transparent;
     border: 1px solid currentColor;
-  ` : ''}
+  `
+      : ""}
 
-  ${({ size }) => size === 'xs' && `
-    padding: 4px 8px; 
+  ${({ size }) =>
+    size === "xs" &&
+    `
     font-size: 12px; 
+    padding: 4px 8px; 
   `}
-  ${({ size }) => size === 'md' && `
+  ${({ size }) =>
+    size === "md" &&
+    `
+    font-size: 14px; 
     padding: 8px 16px; 
-    font-size: 16px; 
   `}
-  ${({ size }) => size === 'lg' && `
-    padding: 12px 24px; 
-    font-size: 20px; 
+  ${({ size }) =>
+    size === "lg" &&
+    `
+    font-size: 16px;
+    padding: 16px 50px;
   `}
 `;
 
 export const IconWrapper = styled.span`
-    padding: 4px 8px;   
+  margin-right: 8px;
 `;
