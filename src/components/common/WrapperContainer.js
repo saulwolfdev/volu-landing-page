@@ -16,7 +16,7 @@ const Contanier=styled.div`
                            "containersoon"
                            "containernews"
                            "containerfooter";
-    grid-template-rows: 50px 4fr 1fr 1fr 1fr 1fr auto;
+    grid-template-rows: 50px 3fr 1fr 1fr 1fr 1fr auto;
     border: 1px solid black;
     @media(min-width: 320px){
         //background-color: rebeccapurple;
