@@ -28,21 +28,26 @@ const Button=styled.button`
 `;
  
 const ContentList=styled.ul`
-    position: relative;
     width: 100%;
     height: 0;
     display: grid;
     grid-template-areas: "logo contact register login";
-    grid-template-rows: auto 1fr 1fr 1fr;
+    grid-template-columns:60px 1fr auto auto;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
 `
 const ContentListLogo=styled.li`
 grid-area: logo;
 `
 const ContentListContact=styled(ContentListLogo)`
 grid-area: contact;
+display: flex;
+justify-content: flex-start;
 `
 const ContentListRegister=styled(ContentListLogo)`
 grid-area: register;
+display: flex;
+justify-content: flex-end;
 `
 const ContentListLogin=styled(ContentListLogo)`
 grid-area: login;
