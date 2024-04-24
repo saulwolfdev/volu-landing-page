@@ -10,6 +10,14 @@ const GlobalStyles=createGlobalStyle`
   body{
     font-family: "Inter",sans-serif;
   }
-
+ul{
+  list-style: none;
+  padding: 0;
+ margin: 0;
+  display: block;
+}
+li{
+  display: block;
+}
 `;
 export default GlobalStyles;

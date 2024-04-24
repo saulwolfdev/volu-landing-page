@@ -37,12 +37,6 @@ const Contanier=styled.div`
  height: 100%;
  background-color:#F8F9FF;
  grid-area: contanierheader;
- display: flex;
- justify-content: center;
- align-items: center;
- border-bottom: 1px solid black;
-
-
  `;
  const ContanierSlider=styled.div`
  //background-color:yellow;
