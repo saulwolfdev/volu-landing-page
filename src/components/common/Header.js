@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import LogoSVG from '../assets/Logo.svg';
+import { Button } from "components/uiElements";
+import mockData from '../mockData/mockData.json';
 
 const NavBar=styled.nav`
     position: relative;
@@ -13,19 +16,19 @@ const Logo=styled.img`
     align-items: center;
     justify-content: center;
 `;
-const Button=styled.button`
-    display: flex;
-    align-items: center;
-    align-content: center;
-    font-size: 16px;    
-    padding: 16px 50px;
-    text-align: center;
-    background-color:#009379;
-    color: #ffffff;
-    border-radius: 20px;
-    border: 0;
-    cursor: pointer;
-`;
+// const Button=styled.button`
+//     display: flex;
+//     align-items: center;
+//     align-content: center;
+//     font-size: 16px;    
+//     padding: 16px 50px;
+//     text-align: center;
+//     background-color:#009379;
+//     color: #ffffff;
+//     border-radius: 20px;
+//     border: 0;
+//     cursor: pointer;
+// `;
  
 const ContentList=styled.ul`
     position: relative;
@@ -49,10 +52,18 @@ grid-area: login;
 `
 
 export function Header(){
+    const { logo, menu, buttons } = mockData.header;
     return(
         <NavBar>
             <ContentList>
-            <ContentListLogo><Logo src="#"/></ContentListLogo>
+            <ContentListLogo>
+                <Logo src={LogoSVG} alt={logo.altText}/>
+                <ul className="menu-items">
+                {menu.items.map(item => (
+                    <li key={item.id}>{item.text}</li>
+                ))}
+            </ul>
+                </ContentListLogo>
                <ContentListContact><Button>Contacto</Button></ContentListContact>
                 <ContentListRegister><Button>Registrarse</Button></ContentListRegister>
                 <ContentListLogin><Button> + Comenzar</Button></ContentListLogin>
