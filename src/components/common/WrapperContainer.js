@@ -6,6 +6,9 @@ const Contanier=styled.div`
      display:grid;
      height: 100vh;
      width: 100%;
+     max-width: 1200px;
+     margin: 0px auto;
+     padding: 0px 16px;
      grid-template-areas: "contanierheader"
                            "contanierslider"
                            "containervalues"
@@ -14,6 +17,7 @@ const Contanier=styled.div`
                            "containernews"
                            "containerfooter";
     grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr auto;
+    border: 1px solid black;
     @media(min-width: 320px){
         //background-color: rebeccapurple;
     }
@@ -36,7 +40,7 @@ const Contanier=styled.div`
  height: 100%;
  background-color:#F8F9FF;
  grid-area: contanierheader;
- padding: 10px 0;
+//padding: 10px 0;
  `;
  const ContanierSlider=styled.div`
  //background-color:yellow;
@@ -44,18 +48,13 @@ const Contanier=styled.div`
 
  
  `;
-
-
   const ContanierValues=styled.section`
 //background-color:green;
  grid-area: containerclients; 
   `;
-
-
  const ContanierClients=styled.div`
 //background-color:orange;
  grid-area: containervalues; 
- 
  `;
  const ContanierSoon=styled.div`
 //background-color:aliceblue;
@@ -70,6 +69,7 @@ grid-area: containernews;
 grid-area: containerfooter; 
  
  `;
+
 export function WrapperContainer(){
     return(
         <Contanier>

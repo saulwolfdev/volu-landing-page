@@ -3,26 +3,26 @@ import styled from "styled-components";
 
 const NavBar=styled.nav`
     margin: 0 auto;
-    width: 95%;
+    width: 100%;
     display: none;
     @media(min-width: 320px){
-        width: 95%;
+        width: 100%;
         display: none;
     }
     @media(min-width: 500px){
-        width: 95%;
+        width: 100%;
         display: none;
     } 
     @media(min-width:900px){
-        width: 95%;
+        width: 100%;
         display: block;
     }
     @media(min-width: 1200px){
-        width: 70%;
+        width: 100%;
         display: block;
     }
     @media(min-width: 1920px){
-        width: 70%;
+        width: 100%;
         display: block;
     }
 `;
@@ -82,26 +82,26 @@ const Button=styled.button`
 
 const NavBarMobile=styled.nav`
     margin: 0 auto;
-    width: 95%;
+   
     display: block;
     @media(min-width: 320px){
-        width: 95%;
+       
         display: block;
     }
     @media(min-width: 500px){
-        width: 95%;
+      
         display: block;
     } 
     @media(min-width:900px){
-        width: 100%;
+      
         display: none;
     }
     @media(min-width: 1200px){
-        width: 70%;
+      
         display: none;
     }
     @media(min-width: 1920px){
-        width: 70%;
+      
         display: none;
     }
 `;
