@@ -19,12 +19,12 @@
           {
             "id": "button1",
             "text": "Registrarse",
-            "color": "Verde"
+            "color": "primary"
           },
           {
             "id": "button2",
             "text": "Comenzar",
-            "color": "Blanco"
+            "color": "secondary"
           }
         ]
       },
