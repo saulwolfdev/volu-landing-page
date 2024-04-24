@@ -14,37 +14,55 @@ const Contanier=styled.div`
                            "containernews"
                            "containerfooter";
     grid-template-rows: 60px 2fr 1fr 1fr 1fr 1fr auto;
-        
+    background-color: white;
+    @media(min-width: 320px){
+        background-color: rebeccapurple;
+    }
+    @media(min-width: 500px){
+        background-color: red;
+    } 
+    @media(min-width:900px){
+        background-color: yellow;
+    }
+    @media(min-width: 1200px){
+        background-color: green;
+    }
+    @media(min-width: 1920px){
+        background-color: aqua;
+    }
+             
 `;
  const ContanierHeader=styled.header`
  width: 100%;
  height: 100%;
- background-color:red;
+ background-color:#F8F9FF;
  grid-area: contanierheader;
  `;
  const ContanierSlider=styled.div`
- background-color:yellow;
- grid-area: contanierslider; 
+ //background-color:yellow;
+ grid-area: contanierslider;
+
+ 
  `;
 
 
-  const ContanierValues=styled.div`
-background-color:green;
+  const ContanierValues=styled.section`
+//background-color:green;
  grid-area: containerclients; 
   `;
 
 
  const ContanierClients=styled.div`
-background-color:orange;
+//background-color:orange;
  grid-area: containervalues; 
  
  `;
  const ContanierSoon=styled.div`
-background-color:aliceblue;
+//background-color:aliceblue;
  grid-area: containersoon; 
  `;
  const ContanierNews=styled.div`
-  background-color:aqua;
+  //background-color:aqua;
 grid-area: containernews; 
  `;
  const ContanierFooter=styled.footer`
