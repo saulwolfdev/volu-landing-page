@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Contanier=styled.div`
      display:grid;
      height: 100vh;
-     background-color: gray;
+     width: 100%;
      grid-template-areas: "contanierheader"
                            "contanierslider"
                            "containervalues"
@@ -13,22 +13,21 @@ const Contanier=styled.div`
                            "containersoon"
                            "containernews"
                            "containerfooter";
-    grid-template-rows: 60px 2fr 1fr 1fr 1fr 1fr auto;
-    background-color: white;
+    grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr auto;
     @media(min-width: 320px){
-        background-color: rebeccapurple;
+        //background-color: rebeccapurple;
     }
     @media(min-width: 500px){
-        background-color: red;
+        //background-color: red;
     } 
     @media(min-width:900px){
-        background-color: yellow;
+        //background-color: yellow;
     }
     @media(min-width: 1200px){
-        background-color: green;
+        //background-color: green;
     }
     @media(min-width: 1920px){
-        background-color: aqua;
+        //ackground-color: aqua;
     }
              
 `;
@@ -37,6 +36,7 @@ const Contanier=styled.div`
  height: 100%;
  background-color:#F8F9FF;
  grid-area: contanierheader;
+ padding: 10px 0;
  `;
  const ContanierSlider=styled.div`
  //background-color:yellow;
