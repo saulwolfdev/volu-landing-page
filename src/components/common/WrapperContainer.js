@@ -1,5 +1,6 @@
 import React from "react";
 import { Header,Slider,Values,Clients,Soon,News,Footer} from "components/common";
+import mockData from "../mockData/mockData.json";
 import styled from "styled-components";
 
 const Contanier=styled.div`
@@ -70,14 +71,53 @@ grid-area: containerfooter;
  
  `;
 
+ const Logo = styled.img`
+  display: block;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export function WrapperContainer(){
+    const { logo, buttons }= mockData.header;
+    const { title, subtitle, description } = mockData.slider;
+
+    const menuItems = buttons[0];
+    const buttonRegister = buttons[1];
+    const buttonStart = buttons[2];
+
+    const logoButtonSart = (
+        <Logo src={`images/${logo.logoPath}`} alt={logo.altText} />
+      );
+    const iconButtonStart = (
+        <img src={`images/${logo.iconPath}`} alt={logo.altTextRocket} />
+      );
     return(
         <Contanier>
             <ContanierHeader>
-                    <Header/>
+                    <Header
+                    header={{
+                        logo, 
+                        menuItems,
+                        buttonRegister,
+                        buttonStart,
+                        logoButtonSart,
+                        iconButtonStart
+                    }}
+                    />
             </ContanierHeader>
         <ContanierSlider>
-                    <Slider/>
+                    <Slider
+                    slider={{
+                        title,
+                        subtitle,
+                        description,
+                        buttonRegister,
+                        buttonStart,
+                        iconButtonStart
+                    }}
+                    />
         </ContanierSlider>
          <ContanierValues>         
                     <Clients/>

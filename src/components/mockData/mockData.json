@@ -27,19 +27,19 @@
           }
         ]
       },
-      "mainSection": {
-        "id": "mainSection1",
+      "slider": {
+        "id": "sliderSection1",
         "title": {
           "id": "title1",
           "text": "Evoluciona tu negocio"
         },
-        "subTitle": {
+        "subtitle": {
           "id": "subTitle1",
           "text": "Revoluciona tus oportunidades"
         },
         "description": {
           "id": "desc1",
-          "text": "Vinculando empresas con las mejores oportunidades del mercado"
+          "text": "Conectando empresas con las mejores oportunidades del mercado mediante IA"
         },
         "illustration": {
           "id": "illust1",

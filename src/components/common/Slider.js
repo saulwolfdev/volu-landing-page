@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import gif from "../../images/gif_pc.gif";
-console.log(gif)
+import { Button } from "components/uiElements";
 
 const HeroContainer=styled.div`
     width: 100%;
@@ -66,41 +66,38 @@ justify-items: center;
 
 `;
 
-const Button=styled.button`
-    display: flex;
-    align-items: center;
-    align-content: center;
-    font-size: 16px;    
-    padding: 16px 50px;
-    text-align: center;
-    background-color:#009379;
-    color: #ffffff;
-    border-radius: 20px;
-    border: 0;
-    cursor: pointer;
-`;
-
-
-export const Slider=()=>{
+export const Slider=({slider})=>{
+    const { title, subtitle, description,buttonRegister, buttonStart, iconButtonStart } = slider
+        
+    
     return(<>
     <HeroContainer>
             <HeroContent>
                 <Title>
-                Evoluciona tu negocio
+                {title.text}
                 </Title>
                 <SubtibleContent>
-                Revoluciona tus oportunidades
+                {subtitle.text}
                 </SubtibleContent>
                 <Paragraph2>
-                Conectando empresas con las mejores oportunidades del mercado mediante IA
+                {description.text}
                 </Paragraph2>
                 <ButtonsContent>
-                    <Button>
-                        Registrarse
-                    </Button>
-                    <Button>
-                       Comenzar
-                    </Button>
+                <Button
+                    key={buttonRegister.id}
+                    color={buttonRegister.color}
+                    size={buttonRegister.size}
+                >
+                    {buttonRegister.text}
+                </Button>
+                <Button
+                    key={buttonStart.id}
+                    color={buttonStart.color}
+                    size={buttonStart.size}
+                    icon={iconButtonStart}
+                >
+                    {buttonStart.text}
+                </Button>
                 </ButtonsContent>
             </HeroContent>
             <HeroContentImage>

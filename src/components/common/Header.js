@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Button, TextButton, MenuButton } from "components/uiElements";
-import mockData from "../mockData/mockData.json";
-// import MenuButton from "components/uiElements/button/MenuButton";
 
 const NavBar = styled.nav`
   margin: 0 auto;
@@ -28,14 +26,6 @@ const NavBar = styled.nav`
     width: 70%;
     display: block;
   }
-`;
-
-const Logo = styled.img`
-  display: block;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
 const ContentList = styled.ul`
@@ -101,18 +91,10 @@ const ContentListMobile = styled(ContentList)`
   grid-template-rows: 1fr;
 `;
 
-export function Header() {
-  const { logo, buttons } = mockData.header;
-  const menuItems = buttons[0];
-  const buttonRegister = buttons[1];
-  const buttonStart = buttons[2];
-
-  const logoButtonSart = (
-    <Logo src={`images/${logo.logoPath}`} alt={logo.altText} />
-  );
-  const iconButtonStart = (
-    <img src={`images/${logo.iconPath}`} alt={logo.altTextRocket} />
-  );
+export function Header({header}) {
+  
+  const { menuItems, buttonRegister, buttonStart, logoButtonSart, iconButtonStart } = header;
+  
   return (
     <>
       <NavBar>
