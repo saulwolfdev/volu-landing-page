@@ -6,7 +6,7 @@ const Contanier=styled.div`
      display:grid;
      height: 100vh;
      width: 100%;
-     max-width: 1200px;
+     max-width: 1240px;
      margin: 0px auto;
      padding: 0px 16px;
      grid-template-areas: "contanierheader"
