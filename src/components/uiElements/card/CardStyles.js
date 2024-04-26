@@ -2,12 +2,10 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   width: 337px;
-  height: 327px;
+  height: 354px;
   border-radius: 12px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-  padding: 32px 30px;
-  /* display: flex;
-  flex-direction: column;   */
+  padding: 32px 30px;  
 `;
 
 export const Icon = styled.img`
@@ -15,9 +13,7 @@ export const Icon = styled.img`
   height: 64px;
 `;
 
-export const Title = styled.h1`   
-  /* align-self: stretch;
-  flex-grow: 0; */
+export const Title = styled.h1`     
   font-family: PublicSans;
   font-size: 30;
   font-weight: 600;
@@ -30,9 +26,7 @@ export const Title = styled.h1`
   margin: 0;
 `;
 
-export const Subtitle = styled.h2`  
-  /* align-self: stretch;
-  flex-grow: 0; */
+export const Subtitle = styled.h2`    
   font-family: PublicSans;
   font-size: 16px;
   font-weight: 600;
