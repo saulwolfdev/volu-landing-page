@@ -13,38 +13,35 @@ const HeroContainer = styled.div`
   grid-template-areas: "text";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  padding: 30px 20px;
   @media (min-width: 320px) {
     grid-template-areas: "text";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    padding: 30px 20px;
+
   }
   @media (min-width: 500px) {
     grid-template-areas: "text";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    padding: 30px 20px;
+
   }
   @media (min-width: 900px) {
     grid-template-areas: "text";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    padding: 30px 20px;
+
   }
   @media (min-width: 1200px) {
     display: grid;
     grid-template-areas: "text image";
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
-    padding: 130px 0;
   }
   @media (min-width: 1920px) {
     display: grid;
     grid-template-areas: "text image";
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
-    padding: 130px 0 20px 0;
   }
 `;
 
