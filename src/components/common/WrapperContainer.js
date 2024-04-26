@@ -41,7 +41,7 @@ const Contanier=styled.div`
  grid-area: contanierheader;
 //padding: 10px 0;
  `;
- const ContanierSlider=styled.div`
+ const ContanierSlider=styled.section`
  //background-color:yellow;
  grid-area: contanierslider;
 
@@ -51,15 +51,15 @@ const Contanier=styled.div`
 //background-color:green;
  grid-area: containerclients; 
   `;
- const ContanierClients=styled.div`
+ const ContanierClients=styled.section`
 //background-color:orange;
  grid-area: containervalues; 
  `;
- const ContanierSoon=styled.div`
+ const ContanierSoon=styled.section`
 //background-color:aliceblue;
  grid-area: containersoon; 
  `;
- const ContanierNews=styled.div`
+ const ContanierNews=styled.section`
   //background-color:aqua;
 grid-area: containernews; 
  `;

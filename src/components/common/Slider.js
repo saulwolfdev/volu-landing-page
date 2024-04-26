@@ -44,7 +44,7 @@ const HeroContainer = styled.div`
     grid-template-areas: "text image";
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
-    padding: 130px 0;
+    padding: 130px 0 20px 0;
   }
 `;
 
