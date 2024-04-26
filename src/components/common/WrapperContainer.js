@@ -70,11 +70,11 @@ export function WrapperContainer() {
       </ContanierHeader>
       <ContanierSlider>
         <Slider />
-      </ContanierSlider>
+      </ContanierSlider> 
       <ContanierValues>
         <Values />
       </ContanierValues>
-      <ContanierClients>
+      {/* <ContanierClients>
         <Clients />
       </ContanierClients>
       <ContanierSoon>
@@ -85,7 +85,7 @@ export function WrapperContainer() {
       </ContanierNews>
       <ContanierFooter>
         <Footer />
-      </ContanierFooter>
+      </ContanierFooter> */}
     </Contanier>
   );
 }
