@@ -146,7 +146,7 @@ export const Clients = () => {
         <ContaninerClientSupplier>
           <ContainerClientsImage src={ImageSupplier} />
           <ContainerClientsFeatures>
-            <li>LISTA</li>
+            <li>LISTA comprador</li>
           </ContainerClientsFeatures>
         </ContaninerClientSupplier>
       </ContaninerClientTabs>
