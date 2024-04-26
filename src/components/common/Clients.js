@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Tabs } from "components/uiElements";
 
 
 
@@ -54,7 +54,11 @@ height: 100%;
 text-align: center;
 `;
 
-const ContaninerClientSupplier=styled.div`
+const ContainerBuyer= styled.div`
+width: 100%
+`
+
+const ContaninerClientBuyer=styled.div`
 width: 100%;
 display: grid;
 grid-template-areas: "image list";
@@ -77,29 +81,64 @@ display: block;
 
 `;
 
-const ContaninerClientBuyer=styled.div`
+const ContaninerClientSupplier=styled.div`
 
 `;
 
 
 export const Clients=()=>{
-    return(
-        <ContaninerClientTabs>
+  const tabs = [
+    {
+      label: 'Comprador',
+      content: 
+      <div>
+      <ContainerBuyer>
                 <Title>
                     Soy comprador
                 </Title>
                 <Subtible>
                 Lleva a cabo tus operaciones con confianza y eficiencia en volu
                 </Subtible>
-            <ContaninerClientSupplier>
+            <ContaninerClientBuyer>
                 <ContainerClientsImage src={""}/>
                 <ContainerClientsFeatures>
                     <li>LISTA</li>
                 </ContainerClientsFeatures>
-            </ContaninerClientSupplier>
-            <ContaninerClientBuyer>
-
             </ContaninerClientBuyer>
+            </ContainerBuyer>
+      </div>
+    },
+    {
+      label: 'Proveedor',
+      content: 
+      <div>
+      <ContainerBuyer>
+                <Title>
+                    Soy proveedor
+                </Title>
+                <Subtible>
+                Lleva a cabo tus operaciones con confianza y eficiencia en volu
+                </Subtible>
+            <ContaninerClientBuyer>
+                <ContainerClientsImage src={""}/>
+                <ContainerClientsFeatures>
+                    <li>LISTA</li>
+                </ContainerClientsFeatures>
+            </ContaninerClientBuyer>
+            </ContainerBuyer>
+      </div>
+    }
+  ];
+
+    return(
+      <>
+      <Tabs tabs={tabs} />
+      <ContaninerClientTabs>
+          
+            <ContaninerClientSupplier>
+
+            </ContaninerClientSupplier>
         </ContaninerClientTabs>
+      </>
     )
 };
