@@ -47,52 +47,60 @@
           "altText": "Notebook"
         }
       },    
-    "additionalSection": {
-      "id": "additionalSection1",
-      "title": {
-        "id": "title2",
-        "text": "Descubre como con Volu"
+    "values": {
+      "id": "valuesSection1",
+      "coreValue": {
+        "title": {
+          "id": "title2",
+          "text": "Descubre como con Volu",
+          "iconPath": "Star.svg"        
+        },
+        "description":{
+          "id": "description1",
+          "text": "En Volu optimizamos el abastecimiento mediante licitaciones competitivas impulsadas por IA, garantizando las mejores condiciones de mercado para los compradores y proporcionando a los proveedores acceso directo a las demandas comerciales más relevantes."
+        },      
+        "image": {
+          "id": "image2",
+          "imagePath": "lamp.svg",
+          "altText": "Lampara"
+        }
       },
-      "description": {
-        "id": "desc2",
-        "text": "Somos la plataforma B2B que redefine el abastecimiento, optimizando cada paso del proceso mediante licitaciones competitivas. Para los compradores, aseguramos las mejores condiciones del mercado, facilitando la adquisición de bienes y/o servicios que destaquen en costo y calidad, mientras que al mismo tiempo damos a los proveedores una ventana al exterior, proporcionando una visibilidad directa a las demandas comerciales más relevantes."
-      },
-      "image": {
-        "id": "image2",
-        "description": "Lampara con tuercas",
-        "altText": "Lampara"
+      "listValues":{
+        "mission": {
+          "id": "mission1",
+          "iconPath": "mission.svg",
+          "altText": "cohete",
+          "title": "Misión",
+          "subtitle": "Conectar y potenciar negocios",
+          "description": "Nuestro propósito es ser el nexo entre compradores y proveedores. Nos enfocamos en eficientizar la búsqueda de soluciones de calidad, propiciando un proceso fluido, eficaz y beneficioso para todas las partes involucradas"
+        },
+        "vision": {
+          "id": "vision1",
+          "iconPath": "vision.svg",
+          "altText": "ojo",
+          "title": "Visión",
+          "subtitle": "Innovar en el comercio B2B de Latinoamérica",
+          "description": "Nos proyectamos como la herramienta líder y pionera en el comercio B2B de Latinoamérica, estableciendo el estándar de excelencia e impulsando una dinámica de mercado en la que la competencia se traduce en oportunidades para todos."
+        },
+        "promise": {
+          "id": "promise1",
+          "iconPath": "promise.svg",
+          "altText": "corazon",
+          "title": "Promesa",
+          "subtitle": "Crecimiento mutuo y éxito compartido",
+          "description": "Te aseguramos las mejores condiciones del mercado y te ofrecemos la plataforma para expandir tus oportunidades de ventas. Con volu, el crecimiento y el éxito son una experiencia compartida"
+        },
+        "values": {
+          "id": "values1",
+          "iconPath": "values.svg",
+          "altText": "vara",
+          "title": "Valores",
+          "subtitle": "innovación, eficiencia y pasión",
+          "description": "Nos mueve la innovación continua, la búsqueda de la eficacia en cada acción y la pasión por lo que hacemos. Estamos comprometidos con la inclusión, la seguridad y la autenticidad, y trabajamos para que estos principios se reflejen en cada interacción"
+        }
       }
     },
-    "valuesSection": {
-      "mission": {
-        "id": "mission1",
-        "icon": "cohete",
-        "title": "Misión",
-        "text": "Conectar y potenciar negocios",
-        "description": "Nuestro propósito es ser el nexo entre compradores y proveedores. Nos enfocamos en eficientizar la búsqueda de soluciones de calidad, propiciando un proceso fluido, eficaz y beneficioso para todas las partes involucradas"
-      },
-      "vision": {
-        "id": "vision1",
-        "icon": "ojo",
-        "title": "Visión",
-        "text": "Innovar en el comercio B2B de Latinoamérica",
-        "description": "Nos proyectamos como la herramienta líder y pionera en el comercio B2B de Latinoamérica, estableciendo el estándar de excelencia e impulsando una dinámica de mercado en la que la competencia se traduce en oportunidades para todos."
-      },
-      "promise": {
-        "id": "promise1",
-        "icon": "corazon",
-        "title": "Promesa",
-        "text": "Crecimiento mutuo y éxito compartido",
-        "description": "Te aseguramos las mejores condiciones del mercado y te ofrecemos la plataforma para expandir tus oportunidades de ventas. Con volu, el crecimiento y el éxito son una experiencia compartida"
-      },
-      "values": {
-        "id": "values1",
-        "icon": "varita",
-        "title": "Valores",
-        "text": "innovación, eficiencia y pasión",
-        "description": "Nos mueve la innovación continua, la búsqueda de la eficacia en cada acción y la pasión por lo que hacemos. Estamos comprometidos con la inclusión, la seguridad y la autenticidad, y trabajamos para que estos principios se reflejen en cada interacción"
-      }
-    },  
+    
     "tabSection": {
       "id": "tabSection1",
       "tabs": [

@@ -71,8 +71,7 @@ grid-area: containerfooter;
  
  `;
 
- const Logo = styled.img`
-  display: block;
+ const Logo = styled.img`  
   height: auto;
   display: flex;
   align-items: center;
@@ -82,7 +81,8 @@ grid-area: containerfooter;
 export function WrapperContainer(){
     const { logo, buttons }= mockData.header;
     const { title, subtitle, description } = mockData.slider;
-
+    const { coreValue, listValues } = mockData.values;
+    
     const menuItems = buttons[0];
     const buttonRegister = buttons[1];
     const buttonStart = buttons[2];
@@ -90,11 +90,19 @@ export function WrapperContainer(){
     const logoButtonSart = (
         <Logo src={`images/${logo.logoPath}`} alt={logo.altText} />
       );
+
     const iconButtonStart = (
         <img src={`images/${logo.iconPath}`} alt={logo.altTextRocket} />
       );
+
+    const coreTitle = coreValue.title.text;
+    const coreDescription = coreValue.description.text;   
+    const coreImage = `${coreValue.image.imagePath}`
+    const coreIcon = `${coreValue.title.iconPath}`
+     
     return(
-        <Contanier>
+        <Contanier> 
+                     
             <ContanierHeader>
                     <Header
                     header={{
@@ -123,7 +131,15 @@ export function WrapperContainer(){
                     <Clients/>
          </ContanierValues>
          <ContanierClients>
-                    <Values/>
+                    <Values
+                    values={{
+                        coreTitle,
+                        coreDescription,
+                        coreImage,
+                        coreIcon,
+                        listValues
+                    }}
+                    />
          </ContanierClients>
          <ContanierSoon>
                     <Soon/>
