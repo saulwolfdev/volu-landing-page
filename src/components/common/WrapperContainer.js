@@ -87,7 +87,7 @@ export function WrapperContainer(){
     const buttonRegister = buttons[1];
     const buttonStart = buttons[2];
 
-    const logoButtonSart = (
+    const logoButtonStart = (
         <Logo src={`images/${logo.logoPath}`} alt={logo.altText} />
       );
     const iconButtonStart = (
@@ -102,7 +102,7 @@ export function WrapperContainer(){
                         menuItems,
                         buttonRegister,
                         buttonStart,
-                        logoButtonSart,
+                        logoButtonStart,
                         iconButtonStart
                     }}
                     />

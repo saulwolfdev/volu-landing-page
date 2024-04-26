@@ -36,6 +36,7 @@ const ContentList = styled.ul`
   grid-template-columns: 60px 1fr auto auto;
   grid-template-rows: 1fr;
   grid-column-gap: 20px;
+  
 `;
 const ContentListLogo = styled.li`
   grid-area: logo;
@@ -44,6 +45,7 @@ const ContentListContact = styled(ContentListLogo)`
   grid-area: contact;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 `;
 const ContentListRegister = styled(ContentListLogo)`
   grid-area: register;
@@ -93,13 +95,13 @@ const ContentListMobile = styled(ContentList)`
 
 export function Header({header}) {
   
-  const { menuItems, buttonRegister, buttonStart, logoButtonSart, iconButtonStart } = header;
+  const { menuItems, buttonRegister, buttonStart, logoButtonStart, iconButtonStart } = header;
   
   return (
     <>
       <NavBar>
         <ContentList>
-          <ContentListLogo>{logoButtonSart}</ContentListLogo>
+          <ContentListLogo>{logoButtonStart}</ContentListLogo>
           <ContentListContact>
             <TextButton key={menuItems.id} color="primary">{menuItems.text}</TextButton>
           </ContentListContact>
@@ -126,7 +128,7 @@ export function Header({header}) {
       </NavBar>
       <NavBarMobile>
         <ContentListMobile>
-          <ContentListLogo>{logoButtonSart}</ContentListLogo>
+          <ContentListLogo>{logoButtonStart}</ContentListLogo>
           <ContentListMenu><MenuButton /> </ContentListMenu>
         </ContentListMobile>
       </NavBarMobile>
