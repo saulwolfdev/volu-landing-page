@@ -1,0 +1,243 @@
+{
+    "header": {
+        "id": "header1",
+        "logo": {
+          "id": "logo1",
+          "logoPath": "Logo.svg",
+          "iconPath": "RocketLaunch.svg",
+          "altTextLogo": "Logo Volu",
+          "altTextRocket": "icon Rocket"
+        },        
+        "buttons": [
+          { 
+              "id": "item1", 
+              "text": "Contacto" 
+          },
+          {
+            "id": "button1",
+            "text": "Registrarse",
+            "color": "secondary",
+            "size": "lg"
+          },
+          {
+            "id": "button2",
+            "text": "Comenzar",
+            "color": "primary",
+            "size": "lg"           
+          }
+        ]
+      },
+      "mainSection": {
+        "id": "mainSection1",
+        "title": {
+          "id": "title1",
+          "text": "Evoluciona tu negocio"
+        },
+        "subTitle": {
+          "id": "subTitle1",
+          "text": "Revoluciona tus oportunidades"
+        },
+        "description": {
+          "id": "desc1",
+          "text": "Vinculando empresas con las mejores oportunidades del mercado"
+        },
+        "illustration": {
+          "id": "illust1",
+          "description": "Ilustración de una notebook",
+          "altText": "Notebook"
+        }
+      },    
+    "additionalSection": {
+      "id": "additionalSection1",
+      "title": {
+        "id": "title2",
+        "text": "Descubre como con Volu"
+      },
+      "description": {
+        "id": "desc2",
+        "text": "Somos la plataforma B2B que redefine el abastecimiento, optimizando cada paso del proceso mediante licitaciones competitivas. Para los compradores, aseguramos las mejores condiciones del mercado, facilitando la adquisición de bienes y/o servicios que destaquen en costo y calidad, mientras que al mismo tiempo damos a los proveedores una ventana al exterior, proporcionando una visibilidad directa a las demandas comerciales más relevantes."
+      },
+      "image": {
+        "id": "image2",
+        "description": "Lampara con tuercas",
+        "altText": "Lampara"
+      }
+    },
+    "valuesSection": {
+      "mission": {
+        "id": "mission1",
+        "icon": "cohete",
+        "title": "Misión",
+        "text": "Conectar y potenciar negocios",
+        "description": "Nuestro propósito es ser el nexo entre compradores y proveedores. Nos enfocamos en eficientizar la búsqueda de soluciones de calidad, propiciando un proceso fluido, eficaz y beneficioso para todas las partes involucradas"
+      },
+      "vision": {
+        "id": "vision1",
+        "icon": "ojo",
+        "title": "Visión",
+        "text": "Innovar en el comercio B2B de Latinoamérica",
+        "description": "Nos proyectamos como la herramienta líder y pionera en el comercio B2B de Latinoamérica, estableciendo el estándar de excelencia e impulsando una dinámica de mercado en la que la competencia se traduce en oportunidades para todos."
+      },
+      "promise": {
+        "id": "promise1",
+        "icon": "corazon",
+        "title": "Promesa",
+        "text": "Crecimiento mutuo y éxito compartido",
+        "description": "Te aseguramos las mejores condiciones del mercado y te ofrecemos la plataforma para expandir tus oportunidades de ventas. Con volu, el crecimiento y el éxito son una experiencia compartida"
+      },
+      "values": {
+        "id": "values1",
+        "icon": "varita",
+        "title": "Valores",
+        "text": "innovación, eficiencia y pasión",
+        "description": "Nos mueve la innovación continua, la búsqueda de la eficacia en cada acción y la pasión por lo que hacemos. Estamos comprometidos con la inclusión, la seguridad y la autenticidad, y trabajamos para que estos principios se reflejen en cada interacción"
+      }
+    },  
+    "tabSection": {
+      "id": "tabSection1",
+      "tabs": [
+        {
+          "id": "tab1",
+          "title": "Comprador",
+          "content": {
+            "id": "content1",
+            "title": "Soy comprador",
+            "text": "Lleva a cabo tus operaciones con confianza y eficiencia en volu"
+          }
+        },
+        {
+          "id": "tab2",
+          "title": "Proveedor",
+          "content": {
+            "id": "content2",
+            "title": "...",
+            "text": "..."
+          }
+        }
+      ]
+    },  
+      "content": {
+        "id": "content1",
+        "title": "Soy comprador",
+        "text": "Lleva a cabo tus operaciones con confianza y eficiencia en volu",
+        "image": {
+          "id": "image1",
+          "description": "Ilustración de licitación",
+          "altText": "licitación"
+        },
+        "additionalText": {
+          "id": "additionalText1",
+          "steps": [
+            {
+              "id": "step1",
+              "icon": "lapiz-cuaderno",
+              "title": "Genera tu licitación",
+              "subtitle": "Inicia con solidez",
+              "description": "Usa nuestro formato preestablecido y crea tu licitación en minutos, dando el primer paso hacia una compra exitosa."
+            },
+            {
+              "id": "step2",
+              "icon": "filtro",
+              "title": "Filtra proveedores",
+              "subtitle": "Selecciona con inteligencia",
+              "description": "Nuestro algoritmo avanzado prospecta y filtra los mejores proveedores a nivel mundial, ajustándolos a tus necesidades de licitación."
+            },
+            {
+              "id": "step3",
+              "icon": "dolar",
+              "title": "Cotiza eficientemente",
+              "subtitle": "Maximiza tu alcance",
+              "description": "Aprovecha nuestro sistema inteligente para cotizar rápidamente, conectándote con propuestas competitivas que sobresalen en calidad y precio."
+            },
+            {
+              "id": "step4",
+              "icon": "cuadrados",
+              "title": "Centralización de propuestas",
+              "subtitle": "Compara con claridad",
+              "description": "Recibe todas las propuestas en un solo lugar, facilitando la comparación y elección de la mejor opción."
+            }
+          ]
+        }
+      },  
+    "upcomingFeatures": {
+      "id": "upcomingFeatures1",
+      "Subtitle": "Futuras funcionalidades",
+      "title": "Próximamente",
+      "features": [
+        {
+          "id": "feature1",
+          "icon": "timer",
+          "title": "Análisis de riesgos",
+          "description": "Nuestro algoritmo evalúa los riesgos, orientándote para tomar decisiones más acertadas, más allá del costo."
+        },
+        {
+          "id": "feature2",
+          "icon": "messenge",
+          "title": "Retroalimentación",
+          "description": "Asegura la mejora constante con seguimiento de retroalimentación en cada fase del proceso."
+        },
+        {
+          "id": "feature3",
+          "icon": "capas",
+          "title": "Trazabilidad",
+          "description": "Mantén un seguimiento completo de todas las etapas de producción y distribución de tu compra, con un registro detallado de cada una."
+        }
+      ]
+    },
+    "callToAction": {
+      "id": "callToAction1",
+      "text": "Accede a todos estos servicios por solo una tarifa de mantenimiento de $XXXXX al mes. Abre tu cuenta ahora y comienza a transformar tu forma de hacer negocios",
+      "subtitle": "Abre tu cuenta ahora y comienza a transformar tu forma de hacer negocios",
+      "button": {
+        "id": "button1",
+        "text": "Lo quiero"
+      },
+      "image": {
+        "id": "image1",
+        "description": "cohete despegando",
+        "altText": "cohete"
+      }
+    },
+    "footer": {
+      "id": "footer1",
+      "navigationLinks": [
+          {
+            "id": "navLink1",
+            "text": "Inicio",
+            "url": "/inicio"
+          },
+          {
+            "id": "navLink2",
+            "text": "Nosotros",
+            "url": "/nosotros"
+          },
+          {
+            "id": "navLink3",
+            "text": "Precios",
+            "url": "/precios"
+          },
+          {
+            "id": "navLink4",
+            "text": "Contacto",
+            "url": "/contacto"
+          }
+        ],
+        "legalLinks": [
+          {
+            "id": "legalLink1",
+            "text": "Términos y condiciones",
+            "url": "/terminos-y-condiciones"
+          },
+          {
+            "id": "legalLink2",
+            "text": "Aviso de privacidad",
+            "url": "/aviso-de-privacidad"
+          }
+        ],
+      "copyright": {
+        "id": "copyright1",
+        "text": "© Volu Technologies S.A.P.I. de C.V.- 2023. Todos los derechos reservados."
+      }
+    }
+  }
+  

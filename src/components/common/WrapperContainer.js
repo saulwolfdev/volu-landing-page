@@ -78,11 +78,11 @@ export function WrapperContainer(){
         <ContanierSlider>
                     <Slider/>
         </ContanierSlider>
-         <ContanierValues>
-                    <Values/>
+         <ContanierValues>         
+                    <Clients/>
          </ContanierValues>
          <ContanierClients>
-                    <Clients/>
+                    <Values/>
          </ContanierClients>
          <ContanierSoon>
                     <Soon/>

@@ -1,138 +1,155 @@
 import React from "react";
 import styled from "styled-components";
+import { Button, TextButton, MenuButton } from "components/uiElements";
+import mockData from "../mockData/mockData.json";
 
-const NavBar=styled.nav`
-    margin: 0 auto;
+const NavBar = styled.nav`
+  margin: 0 auto;
+  width: 95%;
+  display: none;
+  @media (min-width: 320px) {
+    width: 95%;
+    display: none;
+  }
+  @media (min-width: 500px) {
+    width: 95%;
+    display: none;
+  }
+  @media (min-width: 900px) {
+    width: 95%;
+    display: block;
+  }
+  @media (min-width: 1200px) {
+    width: 70%;
+    display: block;
+  }
+  @media (min-width: 1920px) {
+    width: 70%;
+    display: block;
+  }
+`;
+
+const Logo = styled.img`
+  display: block;
+  width: 68.3px;
+  height: 23.8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ContentList = styled.ul`
+  width: 100%;
+  height: 0;
+  display: grid;
+  grid-template-areas: "logo contact register login";
+  grid-template-columns: 60px 1fr auto auto;
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  
+`;
+const ContentListLogo = styled.li`
+  grid-area: logo;
+`;
+const ContentListContact = styled(ContentListLogo)`
+  grid-area: contact;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+const ContentListRegister = styled(ContentListLogo)`
+  grid-area: register;
+  display: flex;
+  justify-content: flex-end;
+`;
+const ContentListLogin = styled(ContentListLogo)`
+  grid-area: login;
+`;
+const ContentListMenu = styled(ContentListLogo)`
+  grid-area: login;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const NavBarMobile = styled.nav`
+  margin: 0 auto;
+  width: 95%;
+  display: block;
+  @media (min-width: 320px) {
+    width: 95%;
+    display: block;
+  }
+  @media (min-width: 500px) {
+    width: 95%;
+    display: block;
+  }
+  @media (min-width: 900px) {
     width: 100%;
     display: none;
-    @media(min-width: 320px){
-        width: 100%;
-        display: none;
-    }
-    @media(min-width: 500px){
-        width: 100%;
-        display: none;
-    } 
-    @media(min-width:900px){
-        width: 100%;
-        display: block;
-    }
-    @media(min-width: 1200px){
-        width: 100%;
-        display: block;
-    }
-    @media(min-width: 1920px){
-        width: 100%;
-        display: block;
-    }
+  }
+  @media (min-width: 1200px) {
+    width: 70%;
+    display: none;
+  }
+  @media (min-width: 1920px) {
+    width: 70%;
+    display: none;
+  }
 `;
 
-const Logo=styled.img`
-    display: block;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+const ContentListMobile = styled(ContentList)`
+  grid-template-areas: "logo login";
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 1fr;
 `;
 
-const Button=styled.button`
-    display: flex;
-    align-items: center;
-    align-content: center;
-    font-size: 16px;    
-    padding: 16px 50px;
-    text-align: center;
-    background-color:#009379;
-    color: #ffffff;
-    border-radius: 20px;
-    border: 0;
-    cursor: pointer;
-`;
-    const ContentList=styled.ul`
-        width: 100%;
-        height: 0;
-        display: grid;
-        grid-template-areas: "logo contact register login";
-        grid-template-columns:60px 1fr auto auto;
-        grid-template-rows: 1fr;
-        grid-column-gap: 20px;
-    `;
-        const ContentListLogo=styled.li`
-        grid-area: logo;
-        `;
-        const ContentListContact=styled(ContentListLogo)`
-        grid-area: contact;
-        display: flex;
-        justify-content: flex-start;
-        `;
-        const ContentListRegister=styled(ContentListLogo)`
-        grid-area: register;
-        display: flex;
-        justify-content: flex-end;
-        `
-        const ContentListLogin=styled(ContentListLogo)`
-        grid-area: login;
-        `
-        const ContentListMenu=styled(ContentListLogo)`
-        grid-area: login;
-        display: flex;
-        justify-content: flex-end;
-        `
+export function Header() {
+  const { logo, buttons } = mockData.header;
+  const menuItems = buttons[0];
+  const buttonRegister = buttons[1];
+  const buttonStart = buttons[2];
 
-const NavBarMobile=styled.nav`
-    margin: 0 auto;
-   
-    display: block;
-    @media(min-width: 320px){
-       
-        display: block;
-    }
-    @media(min-width: 500px){
-      
-        display: block;
-    } 
-    @media(min-width:900px){
-      
-        display: none;
-    }
-    @media(min-width: 1200px){
-      
-        display: none;
-    }
-    @media(min-width: 1920px){
-      
-        display: none;
-    }
-`;
-
-const ContentListMobile=styled(ContentList)`
-         grid-template-areas: "logo login";
-        grid-template-columns:60px 1fr;
-        grid-template-rows: 1fr;
-`;
-
-
-
-export function Header(){
-    return(
-        <>
-        <NavBar>
-            <ContentList>
-            <ContentListLogo><Logo src="#"/></ContentListLogo>
-               <ContentListContact><Button>Contacto</Button></ContentListContact>
-                <ContentListRegister><Button>Registrarse</Button></ContentListRegister>
-                <ContentListLogin><Button>Comenzar</Button></ContentListLogin>
-            </ContentList>
-        </NavBar>
-        <NavBarMobile>
-          <ContentListMobile>
-          <ContentListLogo><Logo src="#"/></ContentListLogo>
-          <ContentListMenu>==</ContentListMenu>
-          </ContentListMobile>
-        </NavBarMobile>
-        </>
-    )
+  const logoButtonStart = (
+    <Logo src={`images/${logo.logoPath}`} alt={logo.altText} />
+  );
+  const iconButtonStart = (
+    <img src={`images/${logo.iconPath}`} alt={logo.altTextRocket} />
+  );
+  return (
+    <>
+      <NavBar>
+        <ContentList>
+          <ContentListLogo>{logoButtonStart}</ContentListLogo>
+          <ContentListContact>
+            <TextButton key={menuItems.id} color="primary">{menuItems.text}</TextButton>
+          </ContentListContact>
+          <ContentListRegister>
+            <Button
+              key={buttonRegister.id}
+              color={buttonRegister.color}
+              size={buttonRegister.size}
+            >
+              {buttonRegister.text}
+            </Button>
+          </ContentListRegister>
+          <ContentListLogin>
+            <Button
+              key={buttonStart.id}
+              color={buttonStart.color}
+              size={buttonStart.size}
+              icon={iconButtonStart}
+            >
+              {buttonStart.text}
+            </Button>
+          </ContentListLogin>
+        </ContentList>
+      </NavBar>
+      <NavBarMobile>
+        <ContentListMobile>
+          <ContentListLogo>{logoButtonStart}</ContentListLogo>
+          <ContentListMenu><MenuButton /> </ContentListMenu>
+        </ContentListMobile>
+      </NavBarMobile>
+    </>
+  );
 }
-
-
