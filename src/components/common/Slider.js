@@ -5,147 +5,311 @@ import stars from "../../images/Stars.svg";
 import circle from "../../images/Circle.svg";
 import gridCircles from "../../images/CirclesGrid.svg";
 import backgroundElipse from "../../images/BackgroungElipse.svg";
-const HeroContainer=styled.div`
-    width: 100%;
-    height: 100%;
+
+const HeroContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas: "text";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 30px 20px;
+  @media (min-width: 320px) {
+    grid-template-areas: "text";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 30px 20px;
+  }
+  @media (min-width: 500px) {
+    grid-template-areas: "text";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 30px 20px;
+  }
+  @media (min-width: 900px) {
+    grid-template-areas: "text";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 30px 20px;
+  }
+  @media (min-width: 1200px) {
     display: grid;
     grid-template-areas: "text image";
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
     padding: 130px 0;
+  }
+  @media (min-width: 1920px) {
+    display: grid;
+    grid-template-areas: "text image";
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr;
+    padding: 130px 0;
+  }
 `;
 
-const HeroContentImage=styled.div`
-grid-area: image;
-display: flex;
-align-items: center;
-position: relative;
-`;
-const HeroDesktopImage=styled.img`
-    width: 130%;
+const HeroContentImage = styled.div`
+  grid-area: image;
+  display: flex;
+  align-items: center;
+  position: relative;
+  display: none;
+  @media (min-width: 320px) {
+    display: none;
+  }
+  @media (min-width: 500px) {
+    display: none;
+  }
+  @media (min-width: 900px) {
+    display: none;
+  }
+  @media (min-width: 1200px) {
     display: block;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: -38px;
-    z-index: 20px;
-
+  }
+  @media (min-width: 1920px) {
+    display: block;
+  }
 `;
-const HeroDesktopCircle=styled(HeroDesktopImage)``;
-const HeroDesktopGridCircle=styled(HeroDesktopImage)``;
-const HeroDesktopElipse=styled(HeroDesktopImage)``;
-
-const HeroContent=styled.div`
-width: 100%;
-align-items: center;
-justify-content: center;
+const HeroDesktopImage = styled.img`
+  width: 130%;
+  display: block;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: -38px;
+  z-index: 20;
 `;
-const Title=styled.h1`
-  font-size: 54px;
+const HeroDesktopCircle = styled(HeroDesktopImage)`
+  width: 12%;
+  z-index: 10;
+  top: -24px;
+  left: 3px;
+`;
+const HeroDesktopGridCircle = styled(HeroDesktopImage)`
+  width: 60%;
+  z-index: 10;
+  left: -208px;
+  top: 235px;
+`;
+const HeroDesktopElipse = styled(HeroDesktopImage)`
+  width: 142%;
+  z-index: 10;
+  top: -50px;
+  left: 90px;
+`;
+
+const HeroContent = styled.div`
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+`;
+const Title = styled.h1`
+  font-size: 2rem;
   font-weight: 900;
   text-align: left;
   margin: 0;
   position: relative;
   display: flex;
-  color:#363837;
+  color: #363837;
+  @media (min-width: 320px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 500px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 900px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 1200px) {
+    font-size: 3.375rem;
+  }
+  @media (min-width: 1920px) {
+    font-size: 3.375rem;
+  }
 `;
 
-const TitleInter=styled(Title)`
- display: block;
- color:#009379;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    padding-left: 16px;
-;`
-const TitleStar=styled.img`
-    width: 60px;
-    height: 60px;
+const TitleInter = styled(Title)`
+  display: block;
+  color: #009379;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: 16px;
+`;
+const TitleStar = styled.img`
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 394px;
+  width: 30px;
+  height: 30px;
+  @media (min-width: 320px) {
+    top: 0;
+    left: 394px;
+    width: 30px;
+    height: 30px;
+  }
+  @media (min-width: 500px) {
+    top: 0;
+    left: 394px;
+    width: 30px;
+    height: 30px;
+  }
+  @media (min-width: 900px) {
     display: block;
     position: absolute;
     top: 0;
-    right: 26px;
+    left: 394px;
+    width: 30px;
+    height: 30px;
+  }
+  @media (min-width: 1200px) {
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 641px;
+    width: 50px;
+    height: 50px;
+  }
+  @media (min-width: 1920px) {
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 641px;
+    width: 50px;
+    height: 50px;
+  }
 `;
 
-
-const Subtitle=styled.h2`
-font-size: 30px;
+const Subtible = styled.h2`
+  font-size: 1.5rem;
+  margin: 8px 0;
+  color: #363837;
+  @media (min-width: 320px) {
+    font-size: 1.5rem;
+    margin: 8px 0;
+  }
+  @media (min-width: 500px) {
+    font-size: 1.5rem;
+    margin: 8px 0;
+  }
+  @media (min-width: 900px) {
+    font-size: 1.875rem;
+    margin: 16px 0;
+  }
+  @media (min-width: 1200px) {
+    font-size: 1.875rem;
+    margin: 16px 0;
+  }
+  @media (min-width: 1920px) {
+    font-size: 1.875rem;
+    margin: 16px 0;
+  }
 `;
-const SubtibleContent=styled.h3`
-font-size: 30px;
-margin:16px 0;
-color:#363837;
+const SubtibleContent = styled.h3`
+  font-size: 1.875rem;
+  margin: 16px 0;
+  color: #363837;
 `;
-const SubtibleContent2=styled.h4`
-    font-size: 22px;
-    font-weight: 500;
-    margin: 0;
-    margin-bottom: 24px;
-    color:#333333;
+const SubtibleContent2 = styled.h4`
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 24px;
+  color: #333333;
 `;
-const SubtibleContent3=styled.h5`
-font-size: 20px;;
+const SubtibleContent3 = styled.h5`
+  font-size: 20px;
 `;
-const Paragraph=styled.p`
-    font-size: 18px;
+const Paragraph = styled.p`
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 16px;
+  color: #333333;
+  @media (min-width: 320px) {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  @media (min-width: 500px) {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  @media (min-width: 900px) {
+    font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 24px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 24px;
+  }
+  @media (min-width: 1920px) {
+    font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 24px;
+  }
 `;
-const Paragraph2=styled.p`
- font-size: 16px;
+const Paragraph2 = styled.p`
+  font-size: 16px;
 `;
 
-
-
-const ButtonsContent=styled.div`
-grid-area: butttons;
-display: flex;
-justify-items: center;
-
+const ButtonsContent = styled.div`
+  grid-area: butttons;
+  display: flex;
+  justify-items: center;
 `;
 
-const Button=styled.button`
-    display: flex;
-    align-items: center;
-    align-content: center;
-    font-size: 16px;    
-    padding: 16px 50px;
-    text-align: center;
-    background-color:#009379;
-    color: #ffffff;
-    border-radius: 20px;
-    border: 0;
-    margin-right: 16px;
-    cursor: pointer;
+const Button = styled.button`
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: 16px;
+  padding: 16px 50px;
+  text-align: center;
+  background-color: #009379;
+  color: #ffffff;
+  border-radius: 20px;
+  border: 0;
+  margin-right: 16px;
+  cursor: pointer;
 `;
 
-
-export const Slider=()=>{
-    return(<>
-    <HeroContainer>
-            <HeroContent>
-                <Title>
-                Evoluciona tu <TitleInter>negocio</TitleInter>
-                <TitleStar src={stars}/>
-                </Title>
-                <SubtibleContent>
-                Revoluciona tus oportunidades
-                </SubtibleContent>
-                <SubtibleContent2>
-                Conectando empresas con las mejores oportunidades del mercado mediante IA
-                </SubtibleContent2>
-                <ButtonsContent>
-                    <Button>
-                        Registrarse
-                    </Button>
-                    <Button>
-                       Comenzar
-                    </Button>
-                </ButtonsContent>
-            </HeroContent>
-            <HeroContentImage>
-                <HeroDesktopImage src={gif}/>
-                
-            </HeroContentImage>
-          
-    </HeroContainer>
-    </>)
-}
+export const Slider = () => {
+  return (
+    <>
+      <HeroContainer>
+        <HeroContent>
+          <Title>
+            Evoluciona tu <TitleInter>negocio</TitleInter>
+            <TitleStar src={stars} />
+          </Title>
+          <Subtible>Revoluciona tus oportunidades</Subtible>
+          <Paragraph>
+            Conectando empresas con las mejores oportunidades del mercado
+            mediante IA
+          </Paragraph>
+          <ButtonsContent>
+            <Button>Registrarse</Button>
+            <Button>Comenzar</Button>
+          </ButtonsContent>
+        </HeroContent>
+        <HeroContentImage>
+          <HeroDesktopImage src={gif} />
+          <HeroDesktopCircle src={circle} />
+          <HeroDesktopGridCircle src={gridCircles} />
+          <HeroDesktopElipse src={backgroundElipse} />
+        </HeroContentImage>
+      </HeroContainer>
+    </>
+  );
+};
