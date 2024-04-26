@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  Header,
-  Slider,
-  Values,
-  Clients,
-  Soon,
-  News,
-  Footer,
-} from "components/common";
+import { Header,Slider,Values,Clients,Soon,News,Footer} from "components/common";
+import mockData from "../mockData/mockData.json";
 import styled from "styled-components";
 
 const Contanier = styled.div`
@@ -61,31 +54,82 @@ const ContanierFooter = styled.footer`
 
   grid-area: containerfooter;
 `;
-
+const Logo = styled.img`  
+height: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+`;
 export function WrapperContainer() {
+  const { logo, buttons }= mockData.header;
+  const { title, subtitle, description } = mockData.slider;
+  const { coreValue, listValues } = mockData.values;
+  
+  const menuItems = buttons[0];
+  const buttonRegister = buttons[1];
+  const buttonStart = buttons[2];
+
+  const logoButtonSart = (
+      <Logo src={`images/${logo.logoPath}`} alt={logo.altText} />
+    );
+
+  const iconButtonStart = (
+      <img src={`images/${logo.iconPath}`} alt={logo.altTextRocket} />
+    );
+
+  const coreTitle = coreValue.title.text;
+  const coreDescription = coreValue.description.text;   
+  const coreImage = `${coreValue.image.imagePath}`
+  const coreIcon = `${coreValue.title.iconPath}`
   return (
-    <Contanier>
-      <ContanierHeader>
-        <Header />
-      </ContanierHeader>
-      <ContanierSlider>
-        <Slider />
-      </ContanierSlider> 
-      <ContanierValues>
-        <Values />
-      </ContanierValues>
-      {/* <ContanierClients>
-        <Clients />
-      </ContanierClients>
-      <ContanierSoon>
-        <Soon />
-      </ContanierSoon>
-      <ContanierNews>
-        <News />
-      </ContanierNews>
-      <ContanierFooter>
-        <Footer />
-      </ContanierFooter> */}
-    </Contanier>
+    <Contanier> 
+    <ContanierHeader>
+            <Header
+            header={{
+                logo, 
+                menuItems,
+                buttonRegister,
+                buttonStart,
+                logoButtonSart,
+                iconButtonStart
+            }}
+            />
+    </ContanierHeader>
+<ContanierSlider>
+            <Slider
+            slider={{
+                title,
+                subtitle,
+                description,
+                buttonRegister,
+                buttonStart,
+                iconButtonStart
+            }}
+            />
+</ContanierSlider>
+ <ContanierValues>         
+            <Clients/>
+ </ContanierValues>
+ <ContanierClients>
+            <Values
+            values={{
+                coreTitle,
+                coreDescription,
+                coreImage,
+                coreIcon,
+                listValues
+            }}
+            />
+ </ContanierClients>
+ <ContanierSoon>
+            <Soon/>
+ </ContanierSoon>
+  <ContanierNews>
+          <News/>
+  </ContanierNews>
+  <ContanierFooter>
+          <Footer/>
+  </ContanierFooter>
+</Contanier>
   );
 }

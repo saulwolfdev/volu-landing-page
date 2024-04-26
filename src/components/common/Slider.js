@@ -177,7 +177,6 @@ const TitleStar = styled.img`
     height: 50px;
   }
 `;
-
 const Subtible = styled.h2`
   font-size: 1.5rem;
   margin: 8px 0;
@@ -280,8 +279,8 @@ const Button = styled.button`
   margin-right: 16px;
   cursor: pointer;
 `;
-
-export const Slider = () => {
+export const Slider = ({slider}) => {
+  const { title, subtitle, description,buttonRegister, buttonStart, iconButtonStart } = slider
   return (
     <>
       <HeroContainer>
@@ -290,15 +289,27 @@ export const Slider = () => {
             Evoluciona tu <TitleInter>negocio</TitleInter>
             <TitleStar src={stars} />
           </Title>
-          <Subtible>Revoluciona tus oportunidades</Subtible>
+          <Subtible>{subtitle.text}</Subtible>
           <Paragraph>
-            Conectando empresas con las mejores oportunidades del mercado
-            mediante IA
+          {description.text}
           </Paragraph>
           <ButtonsContent>
-            <Button>Registrarse</Button>
-            <Button>Comenzar</Button>
-          </ButtonsContent>
+                <Button
+                    key={buttonRegister.id}
+                    color={buttonRegister.color}
+                    size={buttonRegister.size}
+                >
+                    {buttonRegister.text}
+                </Button>
+                <Button
+                    key={buttonStart.id}
+                    color={buttonStart.color}
+                    size={buttonStart.size}
+                    icon={iconButtonStart}
+                >
+                    {buttonStart.text}
+                </Button>
+                </ButtonsContent>
         </HeroContent>
         <HeroContentImage>
           <HeroDesktopImage src={gif} />
