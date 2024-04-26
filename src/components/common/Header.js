@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Button, TextButton, MenuButton } from "components/uiElements";
 import mockData from "../mockData/mockData.json";
-// import MenuButton from "components/uiElements/button/MenuButton";
 
 const NavBar = styled.nav`
   margin: 0 auto;
@@ -32,7 +31,8 @@ const NavBar = styled.nav`
 
 const Logo = styled.img`
   display: block;
-  height: auto;
+  width: 68.3px;
+  height: 23.8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,6 +46,7 @@ const ContentList = styled.ul`
   grid-template-columns: 60px 1fr auto auto;
   grid-template-rows: 1fr;
   grid-column-gap: 20px;
+  
 `;
 const ContentListLogo = styled.li`
   grid-area: logo;
@@ -54,6 +55,7 @@ const ContentListContact = styled(ContentListLogo)`
   grid-area: contact;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 `;
 const ContentListRegister = styled(ContentListLogo)`
   grid-area: register;
@@ -107,7 +109,7 @@ export function Header() {
   const buttonRegister = buttons[1];
   const buttonStart = buttons[2];
 
-  const logoButtonSart = (
+  const logoButtonStart = (
     <Logo src={`images/${logo.logoPath}`} alt={logo.altText} />
   );
   const iconButtonStart = (
@@ -117,7 +119,7 @@ export function Header() {
     <>
       <NavBar>
         <ContentList>
-          <ContentListLogo>{logoButtonSart}</ContentListLogo>
+          <ContentListLogo>{logoButtonStart}</ContentListLogo>
           <ContentListContact>
             <TextButton key={menuItems.id} color="primary">{menuItems.text}</TextButton>
           </ContentListContact>
@@ -144,7 +146,7 @@ export function Header() {
       </NavBar>
       <NavBarMobile>
         <ContentListMobile>
-          <ContentListLogo>{logoButtonSart}</ContentListLogo>
+          <ContentListLogo>{logoButtonStart}</ContentListLogo>
           <ContentListMenu><MenuButton /> </ContentListMenu>
         </ContentListMobile>
       </NavBarMobile>
