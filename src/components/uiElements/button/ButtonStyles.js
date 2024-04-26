@@ -2,15 +2,20 @@ import styled from "styled-components";
 
 export const BaseButton = styled.button.attrs((props) => ({
   outline: undefined,
-}))`
+}))`  
+  width: 188px;
+  height: 60px;
+  flex-grow: 0;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  align-content: center;
-  text-align: center;
+  gap: 8px;
+  padding: 16px 50px;
   border-radius: 20px;
+  background-color: #009379;
   border: 0;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
 
   ${({ color }) =>
     color === "primary" &&

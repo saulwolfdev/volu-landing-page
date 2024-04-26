@@ -73,11 +73,14 @@ export function WrapperContainer() {
       <Logo src={`images/${logo.logoPath}`} alt={logo.altText} />
     );
 
+    const logoButtonStart = (
+      <Logo src={`images/${logo.logoPath}`} alt={logo.altText} />
+    );
   const iconButtonStart = (
       <img src={`images/${logo.iconPath}`} alt={logo.altTextRocket} />
     );
 
-  const coreTitle = coreValue.title.text;
+    const coreTitle = coreValue.title.text;
   const coreDescription = coreValue.description.text;   
   const coreImage = `${coreValue.image.imagePath}`
   const coreIcon = `${coreValue.title.iconPath}`
