@@ -2,110 +2,162 @@ import React from "react";
 import styled from "styled-components";
 import { Button, TextButton, MenuButton } from "components/uiElements";
 
-const NavBar = styled.nav`
-  margin: 0 auto;
-  width: 95%;
+import NavBarLogoSvg from "../../images/LogotipoVolu.svg";
+
+//VISIBLE HIDDEN BOX
+
+const BoxShowTrueDesktop = styled.div`
+  width: 100%;
+  height: 100%;
   display: none;
   @media (min-width: 320px) {
-    width: 95%;
+    width: 100%;
+    height: 100%;
     display: none;
   }
   @media (min-width: 500px) {
-    width: 95%;
+    width: 100%;
+    height: 100%;
     display: none;
-  }
-  @media (min-width: 900px) {
-    width: 95%;
-    display: block;
-  }
-  @media (min-width: 1200px) {
-    width: 70%;
-    display: block;
-  }
-  @media (min-width: 1920px) {
-    width: 70%;
-    display: block;
-  }
-`;
-
-const ContentList = styled.ul`
-  width: 100%;
-  height: 0;
-  display: grid;
-  grid-template-areas: "logo contact register login";
-  grid-template-columns: 60px 1fr auto auto;
-  grid-template-rows: 1fr;
-  grid-column-gap: 20px;
-  
-`;
-const ContentListLogo = styled.li`
-  grid-area: logo;
-`;
-const ContentListContact = styled(ContentListLogo)`
-  grid-area: contact;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`;
-const ContentListRegister = styled(ContentListLogo)`
-  grid-area: register;
-  display: flex;
-  justify-content: flex-end;
-`;
-const ContentListLogin = styled(ContentListLogo)`
-  grid-area: login;
-`;
-const ContentListMenu = styled(ContentListLogo)`
-  grid-area: login;
-  display: flex;
-  justify-content: flex-end;
-`;
-
-const NavBarMobile = styled.nav`
-  margin: 0 auto;
-  width: 95%;
-  display: block;
-  @media (min-width: 320px) {
-    width: 95%;
-    display: block;
-  }
-  @media (min-width: 500px) {
-    width: 95%;
-    display: block;
   }
   @media (min-width: 900px) {
     width: 100%;
-    display: none;
+    height: 100%;
+    display: block;
   }
   @media (min-width: 1200px) {
-    width: 70%;
-    display: none;
+    width: 100%;
+    height: 100%;
+    display: block;
   }
   @media (min-width: 1920px) {
-    width: 70%;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+`;
+const BoxShowTrueMObile = styled.div`
+  display: block;
+  width: 100%;
+  height: 100%;
+  @media (min-width: 320px) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: 500px) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: 900px) {
     display: none;
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: 1200px) {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: 1920px) {
+    display: none;
+    width: 100%;
+    height: 100%;
   }
 `;
 
-const ContentListMobile = styled(ContentList)`
-  grid-template-areas: "logo login";
-  grid-template-columns: 60px 1fr;
-  grid-template-rows: 1fr;
+//NavBar DESKTOP
+const NavBar = styled.nav`
+  margin: 0 auto;
+  width: 1240px;
+  height: 100%;
+  display: grid;
+  grid-template:
+    "logoNavbar contactNavbar contentButtons" 1fr/
+    100px 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+`;
+const NavBarContentLogo = styled.div`
+  grid-area: logoNavbar;
+`;
+const NavBarContentLogoImg = styled.img`
+  grid-area: logoNavbar;
+  display: block;
+  width: 100px;
+  height: auto;
+`;
+const NavBarContentButton = styled.div`
+  width: 100%;
+  height: 100%;
+  grid-area: contactNavbar;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`;
+const NavBarContentButtons = styled.div`
+  grid-area: contentButtons;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+//NavBar MOBILE
+const NavBarMobile = styled.nav`
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template:
+    "logoNavbarMobile menuNavbarMobile" 1fr/
+    140px 1fr;
+  grid-column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 `;
 
-export function Header({header}) {
-  
-  const { menuItems, buttonRegister, buttonStart, logoButtonStart, iconButtonStart } = header;
-  
+const NavBarContentLogoMobile = styled.div`
+  grid-area: logoNavbarMobile;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+const NavBarContentMenuMobile = styled.div`
+  grid-area: menuNavbarMobile;
+`;
+
+const NavBarContentLogoMobileImg = styled.img`
+  display: block;
+  width: 100px;
+  height: auto;
+`;
+
+export function Header({ header }) {
+  const {
+    menuItems,
+    buttonRegister,
+    buttonStart,
+    logoButtonStart,
+    iconButtonStart,
+  } = header;
+
   return (
     <>
-      <NavBar>
-        <ContentList>
-          <ContentListLogo>{logoButtonStart}</ContentListLogo>
-          <ContentListContact>
-            <TextButton key={menuItems.id} color="primary">{menuItems.text}</TextButton>
-          </ContentListContact>
-          <ContentListRegister>
+      <BoxShowTrueDesktop>
+        <NavBar>
+          <NavBarContentLogo>
+            <NavBarContentLogoImg src={NavBarLogoSvg} />
+          </NavBarContentLogo>
+          <NavBarContentButton>
+            <TextButton key={menuItems.id} color="primary">
+              {menuItems.text}
+            </TextButton>
+          </NavBarContentButton>
+          <NavBarContentButtons>
             <Button
               key={buttonRegister.id}
               color={buttonRegister.color}
@@ -113,8 +165,6 @@ export function Header({header}) {
             >
               {buttonRegister.text}
             </Button>
-          </ContentListRegister>
-          <ContentListLogin>
             <Button
               key={buttonStart.id}
               color={buttonStart.color}
@@ -123,15 +173,19 @@ export function Header({header}) {
             >
               {buttonStart.text}
             </Button>
-          </ContentListLogin>
-        </ContentList>
-      </NavBar>
-      <NavBarMobile>
-        <ContentListMobile>
-          <ContentListLogo>{logoButtonStart}</ContentListLogo>
-          <ContentListMenu><MenuButton /> </ContentListMenu>
-        </ContentListMobile>
-      </NavBarMobile>
+          </NavBarContentButtons>
+        </NavBar>
+      </BoxShowTrueDesktop>
+      <BoxShowTrueMObile>
+        <NavBarMobile>
+          <NavBarContentLogoMobile>
+            <NavBarContentLogoMobileImg src={NavBarLogoSvg}/>
+          </NavBarContentLogoMobile>
+          <NavBarContentMenuMobile>
+            <MenuButton />
+          </NavBarContentMenuMobile>
+        </NavBarMobile>
+      </BoxShowTrueMObile>
     </>
   );
 }
