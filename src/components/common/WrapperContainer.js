@@ -5,54 +5,45 @@ import styled from "styled-components";
 
 const Contanier = styled.div`
   display: grid;
-  height: 100vh;
-  width: 100%;
-  max-width: 1240px;
+  min-height: 100vh;
   margin: 0px auto;
-  grid-template-areas:
-                    "contanierheader"
-                    "contanierslider"
-                    "containervalues"
-                    "containerclients"
-                    "containersoon"
-                    "containernews"
-                    "containerfooter";
-  grid-template-rows:50px 3fr 2fr 1fr 1fr 1fr auto;
+  border: 1px solid red;
+  grid-template:
+                "headerWrapper"     60px
+                "sliderWrapper"     1fr
+                "valuesWrapper"     1fr 
+                "clientsWrapper"    1fr
+                "soonWrapper"       1fr
+                "newsWrapper"       1fr
+                "footerWrapper"     300px/1fr;
 `;
 const ContanierHeader = styled.header`
-  width: 100%;
-  height: 100%;
-  background-color: #f8f9ff;
-  grid-area: contanierheader;
+  grid-area: headerWrapper;
+  border: 1px solid green;
 `;
 const ContanierSlider = styled.section`
-  width: 100%;
-  height: 100%;
-  grid-area: contanierslider;
+  grid-area: sliderWrapper;
+  border: 1px solid orange;
 `;
 const ContanierValues = styled.section`
-  width: 100%;
-  height: 100%;
-  grid-area: containerclients;
+  grid-area: valuesWrapper;
+  border: 1px solid purple;
 `;
 const ContanierClients = styled.section`
-  width: 100%;
-  height: 100%;
-  grid-area: containervalues;
+  grid-area: clientsWrapper;
+  border: 1px solid black;
 `;
 const ContanierSoon = styled.section`
-  width: 100%;
-  height: 100%;
-  grid-area: containersoon;
+  grid-area: soonWrapper;
+  border: 1px solid tomato;
 `;
 const ContanierNews = styled.section`
-  width: 100%;
-  height: 100%;
-  grid-area: containernews;
+  grid-area: newsWrapper;
+  border: 1px solid gray;
 `;
 const ContanierFooter = styled.footer`
-
-  grid-area: containerfooter;
+  grid-area: footerWrapper;
+  border: 1px solid rebeccapurple;
 `;
 const Logo = styled.img`  
 height: auto;
