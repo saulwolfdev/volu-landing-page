@@ -5,6 +5,7 @@ import stars from "../../images/Stars.svg";
 import circle from "../../images/Circle.svg";
 import gridCircles from "../../images/CirclesGrid.svg";
 import backgroundElipse from "../../images/BackgroungElipse.svg";
+import { Button } from "components/uiElements";
 
 const HeroContainer = styled.div`
   width: 100%;
@@ -265,20 +266,6 @@ const ButtonsContent = styled.div`
   justify-items: center;
 `;
 
-const Button = styled.button`
-  display: flex;
-  align-items: center;
-  align-content: center;
-  font-size: 16px;
-  padding: 16px 50px;
-  text-align: center;
-  background-color: #009379;
-  color: #ffffff;
-  border-radius: 20px;
-  border: 0;
-  margin-right: 16px;
-  cursor: pointer;
-`;
 export const Slider = ({slider}) => {
   const { title, subtitle, description,buttonRegister, buttonStart, iconButtonStart } = slider
   return (
@@ -294,21 +281,21 @@ export const Slider = ({slider}) => {
           {description.text}
           </Paragraph>
           <ButtonsContent>
-                <Button
-                    key={buttonRegister.id}
-                    color={buttonRegister.color}
-                    size={buttonRegister.size}
-                >
-                    {buttonRegister.text}
-                </Button>
-                <Button
-                    key={buttonStart.id}
-                    color={buttonStart.color}
-                    size={buttonStart.size}
-                    icon={iconButtonStart}
-                >
-                    {buttonStart.text}
-                </Button>
+            <Button
+                key={buttonRegister.id}
+                color={buttonRegister.color}
+                size={buttonRegister.size}
+              >
+                {buttonRegister.text}
+              </Button>
+              <Button
+                key={buttonStart.id}
+                color={buttonStart.color}
+                size={buttonStart.size}
+                icon={iconButtonStart}
+              >
+                {buttonStart.text}
+              </Button>
                 </ButtonsContent>
         </HeroContent>
         <HeroContentImage>

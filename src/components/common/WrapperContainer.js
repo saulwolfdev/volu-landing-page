@@ -92,7 +92,7 @@ export function WrapperContainer() {
         />
       </ContanierHeader>
       <ContanierSlider>
-        {/* <Slider
+        <Slider
             slider={{
                 title,
                 subtitle,
@@ -101,7 +101,7 @@ export function WrapperContainer() {
                 buttonStart,
                 iconButtonStart
             }}
-            /> */}
+            />
       </ContanierSlider>
       <ContanierValues>{/* <Clients/> */}</ContanierValues>
       <ContanierClients>
