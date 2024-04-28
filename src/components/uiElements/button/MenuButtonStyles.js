@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const ContainerFlex = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  position: fixed;
+    width: 100%;
+    top: 0vw;
+    height: 100vh;
+    overflow: hidden;
 `;
 
 export const ContainerMenu = styled.div`
@@ -25,8 +26,8 @@ export const Toggle = styled.input`
 
 export const MenuLabel = styled.label`
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 40px;
+  right: 36px;
   z-index: 3;
   width: 40px;
   height: 40px; 
@@ -54,17 +55,20 @@ export const CloseIcon = styled.span`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-65%, -60%);
-  font-size: 60px;
+  transform: translate(-12%, -60%);
+  font-size: 62px;
   color: #009379;
   cursor: pointer;
 `;
 
 export const Ul = styled.ul`
   display: flex;
+  position: relative;
+  right: 0%;
   font-size: 32px;
-  margin-top: 40px;
+  margin-top: 70px;
   flex-direction: column;
   color: #009379;
+  align-items: flex-start;
   cursor: pointer;
 `;

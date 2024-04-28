@@ -59,12 +59,7 @@ const ContanierFooter = styled.footer`
   grid-area: footerWrapper;
   border: 1px solid rebeccapurple;
 `;
-const Logo = styled.img`
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+
 export function WrapperContainer() {
   const { logo, buttons } = mockData.header;
   const { title, subtitle, description } = mockData.slider;
@@ -73,11 +68,7 @@ export function WrapperContainer() {
   const menuItems = buttons[0];
   const buttonRegister = buttons[1];
   const buttonStart = buttons[2];
-
-  const logoButtonSart = (
-    <Logo src={`images/${logo.logoPath}`} alt={logo.altText} />
-  );
-
+  
   const iconButtonStart = (
     <img src={`images/${logo.iconPath}`} alt={logo.altTextRocket} />
   );
@@ -95,7 +86,7 @@ export function WrapperContainer() {
             menuItems,
             buttonRegister,
             buttonStart,
-            logoButtonSart,
+            logo,           
             iconButtonStart,
           }}
         />

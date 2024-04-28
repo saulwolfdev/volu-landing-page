@@ -15,6 +15,7 @@ export const BaseButton = styled.button.attrs((props) => ({
   border-radius: 20px;
   background-color: #009379;
   border: 0;
+  margin-right: 8px;
   cursor: pointer;
 
   ${({ color }) =>
