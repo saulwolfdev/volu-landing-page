@@ -71,6 +71,7 @@ export function WrapperContainer() {
   const { title, subtitle, description } = mockData.slider;
   const { coreValue, listValues } = mockData.values;
   const { contentBuyer, contentSupplier } = mockData.clients;
+  const { image, navigationLinks, legalLinks } =  mockData.footer;
 
   const menuItems = buttons[0];
   const buttonRegister = buttons[1];
@@ -134,7 +135,15 @@ export function WrapperContainer() {
       </ContanierClients>
       <ContanierSoon>{/* <Soon/> */}</ContanierSoon>
       <ContanierNews>{/* <News/> */}</ContanierNews>
-      <ContanierFooter>{/* <Footer/> */}</ContanierFooter>
+      <ContanierFooter>
+        <Footer
+        footer={{
+          image,
+          navigationLinks,
+          legalLinks
+        }}
+        />
+        </ContanierFooter>
     </Contanier>
   );
 }

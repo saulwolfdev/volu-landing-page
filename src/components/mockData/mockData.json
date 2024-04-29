@@ -198,7 +198,10 @@
       }
     },
     "footer": {
-      "id": "footer1",
+      "image": {
+        "iconPath": "volu.svg",
+        "altTextLogo": "icon Volu"
+      },     
       "navigationLinks": [
           {
             "id": "navLink1",
@@ -224,7 +227,7 @@
         "legalLinks": [
           {
             "id": "legalLink1",
-            "text": "Términos y condiciones",
+            "text": "Términos y condiciones ",
             "url": "/terminos-y-condiciones"
           },
           {
