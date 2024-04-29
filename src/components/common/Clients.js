@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Tabs, CardList } from "components/uiElements";
 
 import ImageSupplier from "../../images/ImagenProveedor.png";
 
@@ -9,6 +10,7 @@ const Title = styled.h1`
   text-align: center;
   margin: 0;
   position: relative;
+  line-height: 90px;
   color: #363837;
   @media (min-width: 320px) {
     font-size: 2rem;
@@ -34,8 +36,9 @@ const Title = styled.h1`
 
 const Subtible = styled.h2`
   font-size: 1.5rem;
-  margin: 8px 0;
+  margin: 16px 0;
   text-align: center;
+  line-height: 30px;
   color: #363837;
   @media (min-width: 320px) {
     font-size: 1.5rem;
@@ -54,7 +57,7 @@ const ContainerClientTitles = styled.div`
   height: 100%;
   margin-bottom: 16px;
 `;
-const ContaninerClientSupplier = styled.div`
+const ContaninerClientBuyer = styled.div` 
     width: 100%;
     display: grid;
     grid-template-areas: "list";
@@ -81,21 +84,23 @@ const ContaninerClientSupplier = styled.div`
   @media (min-width: 1200px) {
     display: grid;
     grid-template-areas: "image list";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
+    margin-top: 102px;
   }
   @media (min-width: 1920px) {
     display: grid;
     grid-template-areas:"image list";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
+    margin-top: 102px;
   }
 `;
 
 const ContainerClientsImage = styled.img`
   grid-area: image;
   display: none;
-  width: 100%;
-  height: 100%;
+  width: 100;
+  height: 100;
   position: relative;
   z-index: 10;
   display: block;
@@ -112,7 +117,7 @@ const ContainerClientsImage = styled.img`
     grid-area: image;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   z-index: 10;
   }
@@ -120,7 +125,7 @@ const ContainerClientsImage = styled.img`
     grid-area: image;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   z-index: 10;
   }
@@ -131,26 +136,60 @@ const ContainerClientsFeatures = styled.ul`
   display: block;
 `;
 
-const ContaninerClientBuyer = styled.div``;
+const ContaninerClientSupplier = styled.div``;
 
-export const Clients = () => {
-  return (
-    <>
+export const Clients = ({clients}) => {
+
+  const { contentBuyer, contentSupplier } = clients
+
+  const buyerTitle = contentBuyer.title
+  const buyerSubtitle = contentBuyer.subtitle
+
+  const supplierTitle = contentSupplier.title
+  const supplierSubtitle = contentSupplier.subtitle
+//   const steps = JSON.stringify(contentBuyer.listBuyer);
+// console.log(contentBuyer.listBuyer)
+// console.log("steps", steps)
+  const tabs = [
+    {
+      label: 'Comprador',
+      content: 
       <ContaninerClientTabs>
         <ContainerClientTitles>
-          <Title>Soy comprador</Title>
+          <Title>{buyerTitle}</Title>
           <Subtible>
-            Lleva a cabo tus operaciones con confianza y eficiencia en volu
+            {buyerSubtitle}
           </Subtible>
         </ContainerClientTitles>
-        <ContaninerClientSupplier>
-          <ContainerClientsImage src={ImageSupplier} />
+        <ContaninerClientBuyer>
+          <ContainerClientsImage src={`images/${contentBuyer.image.buyerPath}`} alt={contentBuyer.image.altText} />
           <ContainerClientsFeatures>
-            <li>LISTA comprador</li>
+          {contentBuyer.listBuyer.steps.map((step) => (
+                <CardList
+                  key={step.id}
+                  icon={step.iconPath}
+                  title={step.title}
+                  subtitle={step.subtitle}
+                  description={step.description}
+                />
+              ))}
           </ContainerClientsFeatures>
-        </ContaninerClientSupplier>
+        </ContaninerClientBuyer>
       </ContaninerClientTabs>
-      <ContaninerClientBuyer></ContaninerClientBuyer>
-    </>
+    },
+    {
+      label: 'Proveedor',
+      content:       
+      <ContaninerClientSupplier>
+        <Title>{supplierTitle}</Title>
+          <Subtible>
+            {supplierSubtitle}
+          </Subtible>
+      </ContaninerClientSupplier>
+    }
+  ];
+
+  return (
+    <Tabs tabs={tabs} />
   );
 };

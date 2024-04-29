@@ -37,7 +37,7 @@ const ContanierHeader = styled.header`
 
 const ContanierSlider = styled.section`
   grid-area: sliderWrapper;
-  border: 1px solid orange;
+  border: 1px solid orange;  
 `;
 const ContanierValues = styled.section`
   grid-area: valuesWrapper;
@@ -46,6 +46,8 @@ const ContanierValues = styled.section`
 const ContanierClients = styled.section`
   grid-area: clientsWrapper;
   border: 1px solid black;
+  display: grid; //agrege un grid para posicionar el contenido
+  justify-content: center;
 `;
 const ContanierSoon = styled.section`
   grid-area: soonWrapper;
@@ -64,6 +66,7 @@ export function WrapperContainer() {
   const { logo, buttons } = mockData.header;
   const { title, subtitle, description } = mockData.slider;
   const { coreValue, listValues } = mockData.values;
+  const { contentBuyer, contentSupplier } = mockData.clients;
 
   const menuItems = buttons[0];
   const buttonRegister = buttons[1];
@@ -77,6 +80,9 @@ export function WrapperContainer() {
   const coreDescription = coreValue.description.text;
   const coreImage = `${coreValue.image.imagePath}`;
   const coreIcon = `${coreValue.title.iconPath}`;
+
+  
+
   return (
     <Contanier>
       <ContanierHeader>
@@ -103,9 +109,8 @@ export function WrapperContainer() {
             }}
             />
       </ContanierSlider>
-      <ContanierValues>{/* <Clients/> */}</ContanierValues>
-      <ContanierClients>
-        {/* <Values
+      {/* <ContanierValues>
+      <Values
             values={{
                 coreTitle,
                 coreDescription,
@@ -113,7 +118,15 @@ export function WrapperContainer() {
                 coreIcon,
                 listValues
             }}
-            /> */}
+            />
+      </ContanierValues> */}
+      <ContanierClients>
+        <Clients
+        clients ={{
+          contentBuyer, 
+          contentSupplier
+        }}
+         />
       </ContanierClients>
       <ContanierSoon>{/* <Soon/> */}</ContanierSoon>
       <ContanierNews>{/* <News/> */}</ContanierNews>

@@ -126,7 +126,7 @@ const Title = styled.h1`
   }
 `;
 
-const TitleInter = styled(Title)`
+const TitleInter = styled.span`
   display: block;
   color: #009379;
   display: flex;

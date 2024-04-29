@@ -141,7 +141,7 @@ export function Header({ header }) {
     menuItems,
     buttonRegister,
     buttonStart,
-    logoButtonStart,
+    logo,
     iconButtonStart,
   } = header;
 
@@ -150,7 +150,7 @@ export function Header({ header }) {
       <BoxShowTrueDesktop>
         <NavBar>
           <NavBarContentLogo>
-            <NavBarContentLogoImg src={NavBarLogoSvg} />
+            <NavBarContentLogoImg src={`images/${logo.logoPath}`} />
           </NavBarContentLogo>
           <NavBarContentButton>
             <TextButton key={menuItems.id} color="primary">
@@ -179,7 +179,7 @@ export function Header({ header }) {
       <BoxShowTrueMObile>
         <NavBarMobile>
           <NavBarContentLogoMobile>
-            <NavBarContentLogoMobileImg src={NavBarLogoSvg}/>
+            <NavBarContentLogoMobileImg src={`images/${logo.logoPath}`}/>
           </NavBarContentLogoMobile>
           <NavBarContentMenuMobile>
             <MenuButton />

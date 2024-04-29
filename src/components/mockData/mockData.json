@@ -101,28 +101,65 @@
       }
     },
     
-    "tabSection": {
-      "id": "tabSection1",
-      "tabs": [
-        {
-          "id": "tab1",
-          "title": "Comprador",
-          "content": {
-            "id": "content1",
-            "title": "Soy comprador",
-            "text": "Lleva a cabo tus operaciones con confianza y eficiencia en volu"
+    "clients": {
+      "id": "tabSection",      
+          "contentBuyer": {
+          "id": "content1",
+          "title": "Soy comprador",
+          "subtitle": "Lleva a cabo tus operaciones con confianza y eficiencia en volu",
+          "image": {
+            "id": "imageBuyer",
+            "buyerPath": "ImagenProveedor.png",
+            "description": "Ilustración de licitación",
+            "altText": "licitación"
+          },
+          "listBuyer": {
+            "id": "additionalText1",
+            "steps": [
+              {
+                "id": "step1",
+                "iconPath": "edit.svg",
+                "title": "Genera tu licitación",
+                "subtitle": "Inicia con solidez",
+                "description": "Usa nuestro formato preestablecido y crea tu licitación en minutos, dando el primer paso hacia una compra exitosa."
+              },
+              {
+                "id": "step2",
+                "iconPath": "filter.svg",
+                "title": "Filtra proveedores",
+                "subtitle": "Selecciona con inteligencia",
+                "description": "Nuestro algoritmo avanzado prospecta y filtra los mejores proveedores a nivel mundial, ajustándolos a tus necesidades de licitación."
+              },
+              {
+                "id": "step3",
+                "iconPath": "cash.svg",
+                "title": "Cotiza eficientemente",
+                "subtitle": "Maximiza tu alcance",
+                "description": "Aprovecha nuestro sistema inteligente para cotizar rápidamente, conectándote con propuestas competitivas que sobresalen en calidad y precio."
+              },
+              {
+                "id": "step4",
+                "iconPath": "compare.svg",
+                "title": "Centralización de propuestas",
+                "subtitle": "Compara con claridad",
+                "description": "Con volu, tu empresa gana visibilidad y acceso directo a oportunidades comerciales sin complicaciones."
+              }
+            ]
           }
         },
-        {
-          "id": "tab2",
-          "title": "Proveedor",
-          "content": {
-            "id": "content2",
-            "title": "...",
-            "text": "..."
+        "contentSupplier":{
+          "id": "content2",
+          "title": "Soy proveedor",
+          "subtitle": "texto proveedor",
+          "image": {
+            "id": "imageSupplier",
+            "SupplierPath": ".svg",
+            "description": "Ilustración de licitación",
+            "altText": "licitación"
           }
         }
-      ]
+      
+     
     },  
       "content": {
         "id": "content1",
