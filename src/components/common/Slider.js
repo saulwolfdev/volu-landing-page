@@ -106,7 +106,8 @@ const Title = styled.h1`
   font-weight: 900;
   text-align: left;
   margin: 0;
-  position: relative;
+  /* position: relative; */
+  position: inherit;
   display: flex;
   color: #363837;
   @media (min-width: 320px) {
@@ -137,6 +138,7 @@ const TitleInter = styled.span`
 const TitleStar = styled.img`
   display: block;
   position: absolute;
+  
   top: 0;
   left: 394px;
   width: 30px;
@@ -152,28 +154,29 @@ const TitleStar = styled.img`
     left: 394px;
     width: 30px;
     height: 30px;
+    position: inherit;
   }
   @media (min-width: 900px) {
     display: block;
-    position: absolute;
+    /* position: absolute; 
     top: 0;
-    left: 394px;
+    left: 394px;*/
     width: 30px;
     height: 30px;
   }
   @media (min-width: 1200px) {
     display: block;
-    position: absolute;
+    /* position: absolute;
     top: -10px;
-    left: 641px;
+    left: 641px; */
     width: 50px;
     height: 50px;
   }
   @media (min-width: 1920px) {
     display: block;
-    position: absolute;
+    /* position: absolute;
     top: -10px;
-    left: 641px;
+    left: 641px; */
     width: 50px;
     height: 50px;
   }

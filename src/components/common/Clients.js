@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Tabs, CardList } from "components/uiElements";
 
-import ImageSupplier from "../../images/ImagenProveedor.png";
-
 const Title = styled.h1`
   font-size: 1.8rem;
   font-weight: 900;

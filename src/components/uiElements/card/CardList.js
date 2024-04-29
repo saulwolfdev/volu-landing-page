@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import EstrellaSvg from "../../../images/EstrellaSvg.svg";
 
 const Card = styled.div`  
   /* height: 207px; */

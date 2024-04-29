@@ -32,6 +32,10 @@ const ContanierHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    background: #f8f9ff;
+    z-index: 99;
 `;
 
 
@@ -109,7 +113,7 @@ export function WrapperContainer() {
             }}
             />
       </ContanierSlider>
-      {/* <ContanierValues>
+      <ContanierValues>
       <Values
             values={{
                 coreTitle,
@@ -119,7 +123,7 @@ export function WrapperContainer() {
                 listValues
             }}
             />
-      </ContanierValues> */}
+      </ContanierValues>
       <ContanierClients>
         <Clients
         clients ={{

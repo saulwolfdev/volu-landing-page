@@ -1,6 +1,6 @@
-import { MultiCard, BigCard } from "components/uiElements";
 import React from "react";
 import styled from "styled-components";
+import { MultiCard, BigCard } from "components/uiElements";
 import IconSvgLampara from "../../images/DescubreSvg.svg";
 import IconSvgValoes from "../../images/ValoresSvg.svg";
 import IconSvgPromesas from "../../images/CorazonSvg.svg";
@@ -139,41 +139,58 @@ const Paragraph2 = styled.p`
 `;
 
 export const Values =({ values })=>{
-   const { coreTitle, coreDescription, coreImage, coreIcon, listValues } = values;    
+   const { coreTitle, coreDescription, coreImage, coreIcon, listValues } = values; 
+   const valueList = listValues["values"]
+   const missionList = listValues["mission"]
+   const visionList = listValues["vision"]
+   const promiseList = listValues["promise"]
+  
     return(
        <ContainerCards>
-               {/* <BigCard
-        title={coreTitle}
-        description={coreDescription}
-        image={coreImage}
-        icon={coreIcon}
-      />
-      {Object.values(listValues).map((value) => (
-        <MultiCard
-          key={value.id}
-          icon={value.iconPath}
-          altText={value.altText}
-          title={value.title}
-          subtitle={value.subtitle}
-          description={value.description}
-        />
-      ))} */}
+              
                <ContainerItemU>
-                  <SubtibleContent>
-                     Descubre cómo con Volu
-                  </SubtibleContent>
+               <BigCard
+               title={coreTitle}
+               description={coreDescription}
+               image={coreImage}
+               icon={coreIcon}
+             />
                </ContainerItemU>
-               <ContainerItemD>
-                  2
+               <ContainerItemD>                  
+                    <MultiCard
+                      icon={valueList.iconPath}
+                      altText={valueList.altText}
+                      title={valueList.title}
+                      subtitle={valueList.subtitle}
+                      description={valueList.description}
+                    />                  
                </ContainerItemD>
                <ContainerItemT>
-                  3
+               <MultiCard
+                      icon={missionList.iconPath}
+                      altText={missionList.altText}
+                      title={missionList.title}
+                      subtitle={missionList.subtitle}
+                      description={missionList.description}
+                    />
                </ContainerItemT>
                <ContainerItemC>
-                  4
+               <MultiCard
+                      icon={visionList.iconPath}
+                      altText={visionList.altText}
+                      title={visionList.title}
+                      subtitle={visionList.subtitle}
+                      description={visionList.description}
+                    />
                </ContainerItemC>
                <ContainerItemCi>
-                  5
+               <MultiCard
+                      icon={promiseList.iconPath}
+                      altText={promiseList.altText}
+                      title={promiseList.title}
+                      subtitle={promiseList.subtitle}
+                      description={promiseList.description}
+                    />
             </ContainerItemCi>
        </ContainerCards>
     )

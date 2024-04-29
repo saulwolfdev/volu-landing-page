@@ -99,8 +99,7 @@
           "description": "Nos mueve la innovación continua, la búsqueda de la eficacia en cada acción y la pasión por lo que hacemos. Estamos comprometidos con la inclusión, la seguridad y la autenticidad, y trabajamos para que estos principios se reflejen en cada interacción"
         }
       }
-    },
-    
+    },    
     "clients": {
       "id": "tabSection",      
           "contentBuyer": {
@@ -150,60 +149,15 @@
         "contentSupplier":{
           "id": "content2",
           "title": "Soy proveedor",
-          "subtitle": "texto proveedor",
+          "subtitle": "Con volu, tu empresa gana visibilidad y acceso directo a oportunidades comerciales sin complicaciones",
           "image": {
             "id": "imageSupplier",
             "SupplierPath": ".svg",
             "description": "Ilustración de licitación",
             "altText": "licitación"
           }
-        }
-      
-     
-    },  
-      "content": {
-        "id": "content1",
-        "title": "Soy comprador",
-        "text": "Lleva a cabo tus operaciones con confianza y eficiencia en volu",
-        "image": {
-          "id": "image1",
-          "description": "Ilustración de licitación",
-          "altText": "licitación"
-        },
-        "additionalText": {
-          "id": "additionalText1",
-          "steps": [
-            {
-              "id": "step1",
-              "icon": "lapiz-cuaderno",
-              "title": "Genera tu licitación",
-              "subtitle": "Inicia con solidez",
-              "description": "Usa nuestro formato preestablecido y crea tu licitación en minutos, dando el primer paso hacia una compra exitosa."
-            },
-            {
-              "id": "step2",
-              "icon": "filtro",
-              "title": "Filtra proveedores",
-              "subtitle": "Selecciona con inteligencia",
-              "description": "Nuestro algoritmo avanzado prospecta y filtra los mejores proveedores a nivel mundial, ajustándolos a tus necesidades de licitación."
-            },
-            {
-              "id": "step3",
-              "icon": "dolar",
-              "title": "Cotiza eficientemente",
-              "subtitle": "Maximiza tu alcance",
-              "description": "Aprovecha nuestro sistema inteligente para cotizar rápidamente, conectándote con propuestas competitivas que sobresalen en calidad y precio."
-            },
-            {
-              "id": "step4",
-              "icon": "cuadrados",
-              "title": "Centralización de propuestas",
-              "subtitle": "Compara con claridad",
-              "description": "Recibe todas las propuestas en un solo lugar, facilitando la comparación y elección de la mejor opción."
-            }
-          ]
-        }
-      },  
+        }     
+    },      
     "upcomingFeatures": {
       "id": "upcomingFeatures1",
       "Subtitle": "Futuras funcionalidades",
