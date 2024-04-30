@@ -206,22 +206,22 @@ const Subtible = styled.h2`
     margin: 16px 0;
   }
 `;
-const SubtibleContent = styled.h3`
-  font-size: 1.875rem;
-  margin: 16px 0;
-  color: #363837;
-`;
-const SubtibleContent2 = styled.h4`
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 27px;
-  margin: 0;
-  margin-bottom: 24px;
-  color: #333333;
-`;
-const SubtibleContent3 = styled.h5`
-  font-size: 20px;
-`;
+// const SubtibleContent = styled.h3`
+//   font-size: 1.875rem;
+//   margin: 16px 0;
+//   color: #363837;
+// `;
+// const SubtibleContent2 = styled.h4`
+//   font-size: 1.25rem;
+//   font-weight: 500;
+//   line-height: 27px;
+//   margin: 0;
+//   margin-bottom: 24px;
+//   color: #333333;
+// `;
+// const SubtibleContent3 = styled.h5`
+//   font-size: 20px;
+// `;
 const Paragraph = styled.p`
   font-size: 1rem;
   font-weight: 500;
@@ -259,9 +259,9 @@ const Paragraph = styled.p`
   margin-bottom: 24px;
   }
 `;
-const Paragraph2 = styled.p`
-  font-size: 16px;
-`;
+// const Paragraph2 = styled.p`
+//   font-size: 16px;
+// `;
 
 const ButtonsContent = styled.div`
   grid-area: butttons;
@@ -270,7 +270,7 @@ const ButtonsContent = styled.div`
 `;
 
 export const Slider = ({slider}) => {
-  const { title, subtitle, description,buttonRegister, buttonStart, iconButtonStart } = slider
+  const { subtitle, description,buttonRegister, buttonStart, iconButtonStart } = slider
   return (
     <>
       <HeroContainer>

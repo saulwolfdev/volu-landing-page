@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { MultiCard, BigCard } from "components/uiElements";
-import IconSvgLampara from "../../images/DescubreSvg.svg";
-import IconSvgValoes from "../../images/ValoresSvg.svg";
-import IconSvgPromesas from "../../images/CorazonSvg.svg";
-import IconSvgVisiones from "../../images/Ojo.svg";
-import IconSvgMisiones from "../../images/CoheteSvg.svg";
+// import IconSvgLampara from "../../images/DescubreSvg.svg";
+// import IconSvgValoes from "../../images/ValoresSvg.svg";
+// import IconSvgPromesas from "../../images/CorazonSvg.svg";
+// import IconSvgVisiones from "../../images/Ojo.svg";
+// import IconSvgMisiones from "../../images/CoheteSvg.svg";
 //layout
 const ContainerCards=styled.div`
 width: 100%;
@@ -44,99 +44,99 @@ grid-area: itemcinco;
 
 
 //components
-const SubtibleContent = styled.h3`
-  font-size: 1.875rem;
-  margin: 16px 0;
-  color: #363837;
-`;
-const SubtibleContentInter = styled(SubtibleContent)`
-  display: block;
-  color: #009379;
-  display: flex;
-  align-items: center;
-  text-align: left;
-  padding-left: 16px;
-`;
+// const SubtibleContent = styled.h3`
+//   font-size: 1.875rem;
+//   margin: 16px 0;
+//   color: #363837;
+// `;
+// const SubtibleContentInter = styled(SubtibleContent)`
+//   display: block;
+//   color: #009379;
+//   display: flex;
+//   align-items: center;
+//   text-align: left;
+//   padding-left: 16px;
+// `;
 
-const TitleStar = styled.img`
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 394px;
-  width: 30px;
-  height: 30px;
-`;
+// const TitleStar = styled.img`
+//   display: block;
+//   position: absolute;
+//   top: 0;
+//   left: 394px;
+//   width: 30px;
+//   height: 30px;
+// `;
 
-const IconSvgLight = styled.img`
-  display: block;
-  width: 200px;
-  height: 200px;
-`;
-const IconSvgValues = styled.img`
-  display: block;
-  width: 60px;
-  height: 60px;
-`;
-const IconSvgPromises = styled.img`
-  display: block;
-  width: 60px;
-  height: 60px;
-`;
-const IconSvgVision = styled.img`
-  display: block;
-  width: 60px;
-  height: 60px;
-`;
-const IconSvgMision = styled.img`
-  display: block;
-  width: 60px;
-  height: 60px;
-`;
+// const IconSvgLight = styled.img`
+//   display: block;
+//   width: 200px;
+//   height: 200px;
+// `;
+// const IconSvgValues = styled.img`
+//   display: block;
+//   width: 60px;
+//   height: 60px;
+// `;
+// const IconSvgPromises = styled.img`
+//   display: block;
+//   width: 60px;
+//   height: 60px;
+// `;
+// const IconSvgVision = styled.img`
+//   display: block;
+//   width: 60px;
+//   height: 60px;
+// `;
+// const IconSvgMision = styled.img`
+//   display: block;
+//   width: 60px;
+//   height: 60px;
+// `;
 
 
-const SubtibleContent3 = styled.h5`
-  font-size: 20px;
-`;
-const Paragraph = styled.p`
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 27px;
-  margin: 0;
-  margin-bottom: 16px;
-  color: #333333;
-  @media (min-width: 320px) {
-    font-size: 1rem;
-    margin-bottom: 16px;
-  }
-  @media (min-width: 500px) {
-    font-size: 1rem;
-    margin-bottom: 16px;
-  }
-  @media (min-width: 900px) {
-    font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 27px;
-  margin: 0;
-  margin-bottom: 24px;
-  }
-  @media (min-width: 1200px) {
-    font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 27px;
-  margin: 0;
-  margin-bottom: 24px;
-  }
-  @media (min-width: 1920px) {
-    font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 27px;
-  margin: 0;
-  margin-bottom: 24px;
-  }
-`;
-const Paragraph2 = styled.p`
-  font-size: 16px;
-`;
+// const SubtibleContent3 = styled.h5`
+//   font-size: 20px;
+// `;
+// const Paragraph = styled.p`
+//   font-size: 1rem;
+//   font-weight: 500;
+//   line-height: 27px;
+//   margin: 0;
+//   margin-bottom: 16px;
+//   color: #333333;
+//   @media (min-width: 320px) {
+//     font-size: 1rem;
+//     margin-bottom: 16px;
+//   }
+//   @media (min-width: 500px) {
+//     font-size: 1rem;
+//     margin-bottom: 16px;
+//   }
+//   @media (min-width: 900px) {
+//     font-size: 1.25rem;
+//   font-weight: 500;
+//   line-height: 27px;
+//   margin: 0;
+//   margin-bottom: 24px;
+//   }
+//   @media (min-width: 1200px) {
+//     font-size: 1.25rem;
+//   font-weight: 500;
+//   line-height: 27px;
+//   margin: 0;
+//   margin-bottom: 24px;
+//   }
+//   @media (min-width: 1920px) {
+//     font-size: 1.25rem;
+//   font-weight: 500;
+//   line-height: 27px;
+//   margin: 0;
+//   margin-bottom: 24px;
+//   }
+// `;
+// const Paragraph2 = styled.p`
+//   font-size: 16px;
+// `;
 
 export const Values =({ values })=>{
    const { coreTitle, coreDescription, coreImage, coreIcon, listValues } = values; 

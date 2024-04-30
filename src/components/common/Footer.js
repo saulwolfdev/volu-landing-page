@@ -31,10 +31,10 @@ const Image = styled.img`
   padding-bottom: 24px;
 `;
 
-const ListItem = styled.li`
-  list-style-type: none;
-  color: #ebebeb;
-`;
+// const ListItem = styled.li`
+//   list-style-type: none;
+//   color: #ebebeb;
+// `;
 
 const Line = styled.hr`
   width: 100%; 
