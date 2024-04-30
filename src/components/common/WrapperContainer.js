@@ -56,6 +56,8 @@ const ContanierClients = styled.section`
 const ContanierSoon = styled.section`
   grid-area: soonWrapper;
   border: 1px solid tomato;
+  display: flex;
+  justify-content: center;
 `;
 const ContanierNews = styled.section`
   grid-area: newsWrapper;
@@ -73,8 +75,9 @@ export function WrapperContainer() {
   const { title, subtitle, description } = mockData.slider;
   const { coreValue, listValues } = mockData.values;
   const { contentBuyer, contentSupplier } = mockData.clients;
-  const { imageNews } =  mockData.news;
+  const { imageNews, text, buttonNews } =  mockData.news;
   const { image, navigationLinks, legalLinks } =  mockData.footer;
+  const { textSoon, features } =  mockData.soon;
 
   const menuItems = buttons[0];
   const buttonRegister = buttons[1];
@@ -99,9 +102,7 @@ export function WrapperContainer() {
             logo,
             menuItems,
             buttonRegister,
-            buttonStart,
-            logo,           
-            iconButtonStart,
+            buttonStart,            
           }}
         />
       </ContanierHeader>
@@ -136,11 +137,21 @@ export function WrapperContainer() {
         }}
          />
       </ContanierClients>
-      <ContanierSoon>{/* <Soon/> */}</ContanierSoon>
+      <ContanierSoon>
+        <Soon
+        soon={{
+          textSoon, 
+          features
+        }}        
+        />
+        </ContanierSoon>
       <ContanierNews>
         <News
         news={{
-          imageNews
+          imageNews,
+          text,
+          buttonNews,
+          iconButtonStart
         }}
         />
         </ContanierNews>

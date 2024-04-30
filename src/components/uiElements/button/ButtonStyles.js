@@ -3,20 +3,18 @@ import styled from "styled-components";
 export const BaseButton = styled.button.attrs((props) => ({
   outline: undefined,
 }))`  
-  width: 188px;
-  height: 60px;
-  flex-grow: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  padding: 16px 50px;
-  border-radius: 20px;
-  background-color: #009379;
-  border: 0;
-  margin-right: 8px;
-  cursor: pointer;
+   display: flex;
+    align-items: center;
+    align-content: center;
+    font-size: 16px;    
+    padding: 16px 50px;
+    text-align: center;
+    background-color:#009379;
+    color: #ffffff;
+    border-radius: 20px;
+    border: 0;
+    margin:0px 8px;
+    cursor: pointer; 
 
   ${({ color }) =>
     color === "primary" &&
@@ -55,7 +53,9 @@ export const BaseButton = styled.button.attrs((props) => ({
     size === "lg" &&
     `
     font-size: 16px;
-    padding: 16px 50px;
+    padding: 18px 50px;
+    width: 205px;
+    height: 60px;
   `}
 `;
 

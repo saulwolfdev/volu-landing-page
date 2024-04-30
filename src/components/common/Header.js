@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Button, TextButton, MenuButton } from "components/uiElements";
 
-import NavBarLogoSvg from "../../images/LogotipoVolu.svg";
-
 //VISIBLE HIDDEN BOX
 
 const BoxShowTrueDesktop = styled.div`
@@ -82,6 +80,8 @@ const NavBar = styled.nav`
 `;
 const NavBarContentLogo = styled.div`
   grid-area: logoNavbar;
+  position: relative;
+  top: -4px;
 `;
 const NavBarContentLogoImg = styled.img`
   grid-area: logoNavbar;
@@ -123,8 +123,8 @@ const NavBarMobile = styled.nav`
 const NavBarContentLogoMobile = styled.div`
   grid-area: logoNavbarMobile;
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 `;
 const NavBarContentMenuMobile = styled.div`
   grid-area: menuNavbarMobile;
@@ -137,14 +137,10 @@ const NavBarContentLogoMobileImg = styled.img`
 `;
 
 export function Header({ header }) {
-  const {
-    menuItems,
-    buttonRegister,
-    buttonStart,
-    logo,
-    iconButtonStart,
-  } = header;
-
+  const { menuItems, buttonRegister, logo, buttonStart } = header;
+  const iconButtonStart = (
+    <img src={`images/${logo.iconPath}`} alt={logo.altTextRocket} />
+  );
   return (
     <>
       <BoxShowTrueDesktop>
@@ -179,7 +175,7 @@ export function Header({ header }) {
       <BoxShowTrueMObile>
         <NavBarMobile>
           <NavBarContentLogoMobile>
-            <NavBarContentLogoMobileImg src={`images/${logo.logoPath}`}/>
+            <NavBarContentLogoMobileImg src={`images/${logo.logoPath}`} />
           </NavBarContentLogoMobile>
           <NavBarContentMenuMobile>
             <MenuButton />

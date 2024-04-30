@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import { Button } from "components/uiElements";
 
 const Container = styled.div`
@@ -11,7 +11,7 @@ const Container = styled.div`
   background-color: #f8f9ff;
 `;
 
-const LeftSection = styled.div`  
+const LeftSection = styled.div`
   margin: 33.5px 0px 32.5px 84px;
 `;
 
@@ -35,60 +35,60 @@ const Image = styled.img`
 `;
 
 const Title = styled.h1`
-font-size: 26px;
-          line-height: 36px;
-          color: #363837;
-`
+  font-size: 26px;
+  line-height: 36px;
+  color: #363837;
+`;
 const CashContent = styled.div`
-display: flex;
-      align-items: baseline;
-`
+  display: flex;
+  align-items: baseline;
+`;
 
 const CashText = styled.h2`
-         margin-right: 8px;
-    		font-size: 48px;
-    		margin-top: 16px;
-`
+  margin-right: 8px;
+  font-size: 48px;
+  margin-top: 16px;
+`;
 
 const Text = styled.p`
-font-size: 18px;
-   	 font-weight: 600;
-`
+  font-size: 18px;
+  font-weight: 600;
+`;
 const Description = styled.p`
-font-size: 18px;
-    		line-height: 27px;
-    		font-weight: normal;
-    		font-stretch: normal;
-    		font-style: normal;
-    		color: #363837;
-    		margin-bottom: 24px;
-    		margin-top: 12px;
-`
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  color: #363837;
+  margin-bottom: 24px;
+  margin-top: 12px;
+`;
 
-export const News =({ news })=>{
+export const News = ({ news }) => {
+  const { imageNews, text, buttonNews, iconButtonStart } = news;
 
-   const { imageNews } = news
-
- return(
-   <Container>
-    <LeftSection>
-      
-      <TextContainer>
-      <div style={{padding: "24px", width: "620px;", height: "262px"}}>
-        <Title>Accede a todos estos servicios como comprador por una tarifa de </Title>
-        <CashContent>
-        <CashText>$xxxx </CashText>{""} 
-        <Text> al mes.</Text>
-        </CashContent>
-        <Description>Abre tu cuenta ahora y comienza a transformar tu forma de hacer negocios</Description>
-        <Button>Lo quiero</Button>
-        </div>
-      </TextContainer>
-      
-    </LeftSection>
-    <RightSection>
-      <Image src={`images/${imageNews.imagePath}`} alt="Imagen descriptiva" />
-    </RightSection>
-  </Container>
- )
+  return (
+    <Container>
+      <LeftSection>
+        <TextContainer>
+          <div style={{ padding: "24px", width: "620px", height: "262px" }}>
+            <Title>{text.title}</Title>
+            <CashContent>
+              <CashText>{text.titleCash}</CashText>
+              {""}
+              <Text>{text.titleFinal}</Text>
+            </CashContent>
+            <Description>{text.description}</Description>
+            <Button key={buttonNews.id} icon={iconButtonStart}>
+              Lo quiero
+            </Button>
+          </div>
+        </TextContainer>
+      </LeftSection>
+      <RightSection>
+        <Image src={`images/${imageNews.imagePath}`} alt="Imagen descriptiva" />
+      </RightSection>
+    </Container>
+  );
 };

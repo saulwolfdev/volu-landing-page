@@ -1,18 +1,18 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ContainerFlex = styled.div`
   position: fixed;
-    width: 100%;
-    top: 0vw;
-    height: 100vh;
-    overflow: hidden;
+  width: 100%;
+  top: 0vw;
+  height: 100vh;
+  overflow: hidden;
 `;
 
 export const ContainerMenu = styled.div`
   display: block;
   position: absolute;
   top: 0;
-  right: ${({ isOpen }) => (isOpen ? '0' : '-100vw')};
+  right: ${({ isOpen }) => (isOpen ? "0" : "-100vw")};
   width: 100%;
   height: 100vh;
   background: #434343;
@@ -30,13 +30,13 @@ export const MenuLabel = styled.label`
   right: 36px;
   z-index: 3;
   width: 40px;
-  height: 40px; 
+  height: 40px;
   cursor: pointer;
 `;
 
 export const Span = styled.span`
   position: absolute;
-  top: ${({ top }) => top || '0'};
+  top: ${({ top }) => top || "0"};
   width: 30px;
   height: 5px;
   background: #009379;
