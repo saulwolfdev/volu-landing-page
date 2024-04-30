@@ -21,8 +21,7 @@ const Icon = styled.img`
   height: 32px;  
 `;
 
-const Title = styled.h2`
-  font-family: PublicSans;
+const Title = styled.h2`  
   font-size: 30px;
   font-weight: 600;  
   text-align: left;
@@ -31,8 +30,7 @@ const Title = styled.h2`
   line-height: 45px;
 `;
 
-const Subtitle = styled.h3`
-  font-family: PublicSans;
+const Subtitle = styled.h3`  
   font-size: 16px;
   font-weight: 600; 
   text-align: left;  
@@ -40,8 +38,7 @@ const Subtitle = styled.h3`
   color: #363837;
 `;
 
-const Description = styled.p`
-  font-family: PublicSans;
+const Description = styled.p`  
   font-size: 18px;  
   text-align: left;
   max-width: 481px;

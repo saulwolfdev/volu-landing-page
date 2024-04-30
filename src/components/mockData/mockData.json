@@ -183,7 +183,7 @@
         }
       ]
     },
-    "callToAction": {
+    "news": {
       "id": "callToAction1",
       "text": "Accede a todos estos servicios por solo una tarifa de mantenimiento de $XXXXX al mes. Abre tu cuenta ahora y comienza a transformar tu forma de hacer negocios",
       "subtitle": "Abre tu cuenta ahora y comienza a transformar tu forma de hacer negocios",
@@ -191,8 +191,9 @@
         "id": "button1",
         "text": "Lo quiero"
       },
-      "image": {
+      "imageNews": {
         "id": "image1",
+        "imagePath": "launch.svg",
         "description": "cohete despegando",
         "altText": "cohete"
       }

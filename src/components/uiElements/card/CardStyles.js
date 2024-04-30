@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-  width: 337px;
+  width: 347px;
   height: 354px;
   border-radius: 12px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
@@ -13,8 +13,7 @@ export const Icon = styled.img`
   height: 64px;
 `;
 
-export const Title = styled.h1`     
-  font-family: PublicSans;
+export const Title = styled.h1`       
   font-size: 30;
   font-weight: 600;
   font-stretch: normal;
@@ -26,8 +25,7 @@ export const Title = styled.h1`
   margin: 0;
 `;
 
-export const Subtitle = styled.h2`    
-  font-family: PublicSans;
+export const Subtitle = styled.h2`      
   font-size: 16px;
   font-weight: 600;
   font-stretch: normal;

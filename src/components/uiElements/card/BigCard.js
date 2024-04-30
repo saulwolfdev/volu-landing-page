@@ -21,7 +21,7 @@ const ImageContainer = styled.img`
 `;
 
 const TitleContainer = styled.div`
-  width: 343px;
+  width: 380px;
   height: 45px;
   display: flex;
   justify-content: space-between;
@@ -39,8 +39,7 @@ const DescriptionContainer = styled.div`
 `;
 
 const Title = styled.h1` 
-  flex-grow: 0;
-  font-family: PublicSans;
+  flex-grow: 0;  
   font-size: 30px;
   font-weight: 600;
   font-stretch: normal;
@@ -59,8 +58,7 @@ const LightedText = styled.span`
 const Description = styled.p` 
   height: 135px;
   align-self: stretch;
-  flex-grow: 0;
-  font-family: PublicSans;
+  flex-grow: 0;  
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;

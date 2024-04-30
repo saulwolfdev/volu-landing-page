@@ -60,6 +60,8 @@ const ContanierSoon = styled.section`
 const ContanierNews = styled.section`
   grid-area: newsWrapper;
   border: 1px solid gray;
+  display: flex;
+  justify-content: center;
 `;
 const ContanierFooter = styled.footer`
   grid-area: footerWrapper;
@@ -71,6 +73,7 @@ export function WrapperContainer() {
   const { title, subtitle, description } = mockData.slider;
   const { coreValue, listValues } = mockData.values;
   const { contentBuyer, contentSupplier } = mockData.clients;
+  const { imageNews } =  mockData.news;
   const { image, navigationLinks, legalLinks } =  mockData.footer;
 
   const menuItems = buttons[0];
@@ -134,7 +137,13 @@ export function WrapperContainer() {
          />
       </ContanierClients>
       <ContanierSoon>{/* <Soon/> */}</ContanierSoon>
-      <ContanierNews>{/* <News/> */}</ContanierNews>
+      <ContanierNews>
+        <News
+        news={{
+          imageNews
+        }}
+        />
+        </ContanierNews>
       <ContanierFooter>
         <Footer
         footer={{
