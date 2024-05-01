@@ -119,7 +119,7 @@ export function WrapperContainer() {
             />
       </ContanierSlider>
       <ContanierValues>
-      <Values
+      {/* <Values
             values={{
                 coreTitle,
                 coreDescription,
@@ -127,15 +127,15 @@ export function WrapperContainer() {
                 coreIcon,
                 listValues
             }}
-            />
+            /> */}
       </ContanierValues>
       <ContanierClients>
-        <Clients
+        {/* <Clients
         clients ={{
           contentBuyer, 
           contentSupplier
         }}
-         />
+         /> */}
       </ContanierClients>
       <ContanierSoon>
         <Soon
@@ -146,23 +146,23 @@ export function WrapperContainer() {
         />
         </ContanierSoon>
       <ContanierNews>
-        <News
+        {/* <News
         news={{
           imageNews,
           text,
           buttonNews,
           iconButtonStart
         }}
-        />
+        /> */}
         </ContanierNews>
       <ContanierFooter>
-        <Footer
+        {/* <Footer
         footer={{
           image,
           navigationLinks,
           legalLinks
         }}
-        />
+        /> */}
         </ContanierFooter>
     </Contanier>
   );

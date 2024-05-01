@@ -46,6 +46,19 @@ const HeroContainer = styled.div`
   }
 `;
 
+
+const HeroSlider=styled.div`
+
+margin: 0 auto;
+  width: 1240px;
+  height: 100%;
+  display: grid;
+  grid-template:
+    "heroslidertitle herosliderimages" 1fr/
+     1fr             1fr;
+place-items: center;
+`;
+
 const HeroContentImage = styled.div`
   grid-area: image;
   display: flex;
