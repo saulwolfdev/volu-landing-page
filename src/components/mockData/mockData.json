@@ -108,14 +108,14 @@
       "subtitle": "Lleva a cabo tus operaciones con confianza y eficiencia en volu",
       "image": {
         "id": "imageBuyer",
-        "buyerPath": "ImagenProveedor.png",
+        "buyerPath": "imageBuyer.png",
         "description": "Ilustración de licitación",
         "altText": "licitación"
       },
       "listBuyer": {
         "id": "additionalText1",
         "steps": [
-          {
+          {             
             "id": "step1",
             "iconPath": "edit.svg",
             "title": "Genera tu licitación",
@@ -152,11 +152,42 @@
       "subtitle": "Con volu, tu empresa gana visibilidad y acceso directo a oportunidades comerciales sin complicaciones",
       "image": {
         "id": "imageSupplier",
-        "SupplierPath": ".svg",
+        "supplierPath": "imageSupplier.png",
         "description": "Ilustración de licitación",
         "altText": "licitación"
+      },
+      "title2": "Directo a tu bandeja de entrada",
+      "subtitle2": "No necesitas buscar; nosotros llevamos las ventas a ti. Sin registro previo, accede a:",
+      "listSupplier":{
+        "access": [
+          {             
+            "id": "access1",
+            "iconPath": "starOutline.svg",
+            "title": "Oportunidades directas",        
+            "description": "Recibe licitaciones ajustadas a tu perfil y listas para ser atendidas."
+          },
+          {
+            "id": "access2",
+            "iconPath": "check.svg",
+            "title": "Altas probabilidades de éxito",        
+            "description": "Demanda comercial concreta y con gran oportunidad de concretar negocios."
+          },
+          {
+            "id": "access3",
+            "iconPath": "statUp.svg",
+            "title": "Visibilidad mejorada",        
+            "description": "Aumenta tu presencia en el mercado y destaca entre la competencia."
+          },
+          {
+            "id": "access4",
+            "iconPath": "handshake.svg",
+            "title": "Conocimiento del mercado",        
+            "description": "Mantente al tanto de las tendencias y a la vanguardia de las demandas comerciales."
+          }
+        ]
       }
     }
+   
   },
   "soon": {
     "textSoon": {
