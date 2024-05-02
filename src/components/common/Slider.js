@@ -20,7 +20,7 @@ const HeroSlider = styled.div`
     1fr;
   place-items: center;
   border: 1px rebeccapurple;
-  background-color: aqua;
+  //background-color: aqua;
   @media (min-width: 320px) {
     grid-template:
       "heroslidertitles" 1fr
@@ -58,14 +58,15 @@ const HeroSliderImages = styled.div`
   grid-area: herosliderimages;
   width: 100%;
   height: 100%;
-  position: relative;
   display: grid;
+  place-items: center;
 `;
-
-const HeroSliderImagesImgs=styled.div`
-  position: relative;
+const HeroSliderImagesImgs = styled.div`
   width: 100%;
   height: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
 `;
 //TITLES
 const Title = styled.h1`
@@ -137,54 +138,181 @@ const Subtible = styled.h2`
 //IMAGE
 
 const HeroDesktopImage = styled.img`
-  width: 100%;
+  width: 45%;
   display: block;
   height: auto;
   position: absolute;
-  top: 0;
-  left: -38px;
   z-index: 20;
+
+  @media (min-width: 320px) {
+    width: 45%;
+    display: block;
+    height: auto;
+    position: absolute;
+    z-index: 20;
+  }
+  @media (min-width: 500px) {
+    width: 45%;
+    display: block;
+    height: auto;
+    position: absolute;
+    z-index: 20;
+  }
+  @media (min-width: 900px) {
+    width: 45%;
+    display: block;
+    height: auto;
+    position: absolute;
+    z-index: 20;
+  }
+  @media (min-width: 1200px) {
+    width: 100%;
+    display: block;
+    height: auto;
+    position: absolute;
+    z-index: 20;
+  }
+  @media (min-width: 1920px) {
+    width: 100%;
+    display: block;
+    height: auto;
+    position: absolute;
+    z-index: 20;
+  }
 `;
 const HeroDesktopCircle = styled(HeroDesktopImage)`
-  width: 12%;
+
+width: 8%;
+    z-index: 10;
+    top: -46px;
+    left: 366px;
+
+
+  
+  @media (min-width: 320px) {
+    width: 8%;
+    z-index: 10;
+    top: -46px;
+    left: 366px;
+  }
+  @media (min-width: 500px) {
+    width: 8%;
+    z-index: 10;
+    top: -46px;
+    left: 366px;
+  }
+  @media (min-width: 900px) {
+    width: 8%;
+    z-index: 10;
+    top: -46px;
+    left: 366px;lute;
+  z-index: 20;
+  }
+  @media (min-width: 1200px) {
+    width: 12%;
   z-index: 10;
-  top: -24px;
-  left: 3px;
+  top: 65px;
+  left: 30px;
+  }
+  @media (min-width: 1920px) {
+    width: 12%;
+  z-index: 10;
+  top: 65px;
+  left: 30px;
+  }
+
+
 `;
 const HeroDesktopGridCircle = styled(HeroDesktopImage)`
-  width: 60%;
+   width: 26%;
+    z-index: 10;
+    bottom: 2px;
+    left: 221px;
+
+
+  @media (min-width: 320px) {
+    width: 26%;
+    z-index: 10;
+    bottom: 2px;
+    left: 221px;
+  }
+  @media (min-width: 500px) {
+    width: 26%;
+    z-index: 10;
+    bottom: 2px;
+    left: 221px;
+  }
+  @media (min-width: 900px) {
+    width: 26%;
+    z-index: 10;
+    bottom: 2px;
+    left: 221px;
+  }
+  @media (min-width: 1200px) {
+    width: 50%;
   z-index: 10;
-  left: -208px;
-  top: 235px;
+  bottom: 101px;
+  left: -108px;
+  }
+  @media (min-width: 1920px) {
+    width: 50%;
+  z-index: 10;
+  bottom: 101;
+  left: -108px;
+  }
+
+
+//
+
+
 `;
 const HeroDesktopElipse = styled(HeroDesktopImage)`
-  width: 142%;
-  z-index: 10;
-  top: -50px;
-  left: 90px;
-`;
-const HeroContent = styled.div`
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-`;
 
-// const SubtibleContent = styled.h3`
-//   font-size: 1.875rem;
-//   margin: 16px 0;
-//   color: #363837;
-// `;
-// const SubtibleContent2 = styled.h4`
-//   font-size: 1.25rem;
-//   font-weight: 500;
-//   line-height: 27px;
-//   margin: 0;
-//   margin-bottom: 24px;
-//   color: #333333;
-// `;
-// const SubtibleContent3 = styled.h5`
-//   font-size: 20px;
-// `;
+width: 50%;
+    z-index: 10;
+    right: 109px;
+    bottom: -173px;
+    position: absolute;
+  @media (min-width: 320px) {
+
+    width: 50%;
+    z-index: 10;
+    right: 109px;
+    bottom: -173px;
+  }
+  @media (min-width: 500px) {
+ 
+width: 50%;
+    z-index: 10;
+    right: 109px;
+    bottom: -173px;
+  }
+  @media (min-width: 900px) {
+
+    width: 50%;
+    z-index: 10;
+    right: 109px;
+    bottom: -173px;
+  }
+  @media (min-width: 1200px) {
+    width: 130%;
+  z-index: 10;
+  right: -228px;
+  bottom: -122px;
+  }
+  @media (min-width: 1920px) {
+    width: 130%;
+  z-index: 10;
+  right: -228px;
+  bottom: -122px;
+  }
+
+
+//
+
+
+
+`;
 const Paragraph = styled.p`
   font-size: 1rem;
   font-weight: 500;
@@ -222,9 +350,6 @@ const Paragraph = styled.p`
     margin-bottom: 24px;
   }
 `;
-// const Paragraph2 = styled.p`
-//   font-size: 16px;
-// `;
 
 const ButtonsContent = styled.div`
   grid-area: butttons;
@@ -269,10 +394,12 @@ export const Slider = ({ slider }) => {
           </ButtonsContent>
         </HeroSliderTitles>
         <HeroSliderImages>
-          <HeroDesktopImage src={gif} />
-          <HeroDesktopCircle src={circle} />
-          <HeroDesktopGridCircle src={gridCircles} />
-          <HeroDesktopElipse src={backgroundElipse} />
+          <HeroSliderImagesImgs>
+            <HeroDesktopImage src={gif} />
+            <HeroDesktopCircle src={circle} />
+            <HeroDesktopGridCircle src={gridCircles} />
+            <HeroDesktopElipse src={backgroundElipse} />
+          </HeroSliderImagesImgs>
         </HeroSliderImages>
       </HeroSlider>
     </>
