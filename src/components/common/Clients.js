@@ -129,12 +129,42 @@ const ContainerClientsImage = styled.img`
   }
 `;
 
+const ContentSupplier = styled.div`
+width: 1280px;
+height: 781px;
+display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const ContainerImageSupplier = styled.img`
+    display: block;
+    width: 68%;
+    height: 100vh;
+    position: relative;
+    top: 1px;
+    margin-top: 102px;
+`
+
+const TitleTwo = styled.h2`
+color: #181919;
+text-align: center;
+font-size: 32px;
+    line-height: 40px;
+`;
+
+const ContentListSupplier = styled.div`
+margin-top: 100px;
+`;
+
 const ContainerClientsFeatures = styled.ul`
   grid-area: list;
   display: block;
 `;
 
-const ContaninerClientSupplier = styled.div``;
+const ContaninerClientSupplier = styled.div`
+
+`;
 
 export const Clients = ({clients}) => {
 
@@ -145,9 +175,8 @@ export const Clients = ({clients}) => {
 
   const supplierTitle = contentSupplier.title
   const supplierSubtitle = contentSupplier.subtitle
-//   const steps = JSON.stringify(contentBuyer.listBuyer);
-// console.log(contentBuyer.listBuyer)
-// console.log("steps", steps)
+  console.log("contentBuyer",contentBuyer)
+console.log("contentSupplier",contentSupplier)
   const tabs = [
     {
       label: 'Comprador',
@@ -179,10 +208,28 @@ export const Clients = ({clients}) => {
       label: 'Proveedor',
       content:       
       <ContaninerClientSupplier>
+      <ContentSupplier>
         <Title>{supplierTitle}</Title>
           <Subtible>
             {supplierSubtitle}
           </Subtible>
+          <ContainerImageSupplier src={`images/${contentSupplier.image.supplierPath}`} alt={contentSupplier.image.altText} />
+          </ContentSupplier>
+          <ContentListSupplier>
+          <TitleTwo>{contentSupplier.title2}</TitleTwo>
+          <Subtible>
+            {contentSupplier.subtitle2}
+          </Subtible>
+          {contentSupplier.listSupplier.access.map((step) => (
+                <CardList
+                  key={step.id}
+                  icon={step.iconPath}
+                  title={step.title}                  
+                  description={step.description}
+                />
+              ))}
+
+          </ContentListSupplier>
       </ContaninerClientSupplier>
     }
   ];
