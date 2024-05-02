@@ -18,7 +18,7 @@ const Contanier = styled.div`
   border: 1px solid red;
   grid-template:
     "headerWrapper" 100px
-    "sliderWrapper" 1fr
+    "sliderWrapper" 14%
     "valuesWrapper" 1fr
     "clientsWrapper" 1fr
     "soonWrapper" 1fr
