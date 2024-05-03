@@ -97,14 +97,14 @@ export function WrapperContainer() {
   return (
     <Contanier>
       <ContanierHeader>
-        <Header
+         <Header
           header={{
             logo,
             menuItems,
             buttonRegister,
             buttonStart,            
           }}
-        />
+        /> 
       </ContanierHeader>
       <ContanierSlider>
         <Slider
@@ -116,10 +116,10 @@ export function WrapperContainer() {
                 buttonStart,
                 iconButtonStart
             }}
-            />
+            /> 
       </ContanierSlider>
       <ContanierValues>
-      {/* <Values
+      <Values
             values={{
                 coreTitle,
                 coreDescription,
@@ -127,7 +127,7 @@ export function WrapperContainer() {
                 coreIcon,
                 listValues
             }}
-            /> */}
+            /> 
       </ContanierValues>
       <ContanierClients>
         {/* <Clients
@@ -138,12 +138,12 @@ export function WrapperContainer() {
          /> */}
       </ContanierClients>
       <ContanierSoon>
-        <Soon
+        {/* <Soon
         soon={{
           textSoon, 
           features
         }}        
-        />
+        /> */}
         </ContanierSoon>
       <ContanierNews>
         {/* <News

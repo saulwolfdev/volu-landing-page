@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Icon, Title, Subtitle, Description } from './CardStyles';
+import { Card, Icon,TitleCard,SubtitleCard, DescriptionCard } from './CardStyles';
 
 const MultiCard = ({icon, altText, title, subtitle, description}) => {
 
@@ -8,12 +8,12 @@ const MultiCard = ({icon, altText, title, subtitle, description}) => {
       );
 
     return (
-      <Card>       
+      <>       
         {iconCard}
-        <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
-        <Description>{description}</Description>
-      </Card>
+        <TitleCard>{title}</TitleCard>
+        <SubtitleCard>{subtitle}</SubtitleCard>
+        <DescriptionCard>{description}</DescriptionCard>
+      </>
     );
   };
   

@@ -52,3 +52,26 @@ export const Description = styled.p`
   color: rgba(54, 56, 55, 0.6);
   margin-top: 16px;
 `;
+
+export const TitleCard = styled.h3`
+  font-size: 1.7rem;
+  line-height: 45px;
+  text-align: left;
+  color: #181919;
+  margin: 0;
+`;
+
+export const LightedText = styled.span`
+  color: #009379;
+`;
+export const SubtitleCard = styled.h4`
+  font-size: 1.125rem;
+  line-height:24px;
+  color: #363837;
+`;
+
+export const DescriptionCard = styled.p`
+  font-size: 1em;
+  line-height:24px;
+  color: rgba(54, 56, 55, 0.6);
+`;

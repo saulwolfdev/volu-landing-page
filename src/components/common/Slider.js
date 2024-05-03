@@ -224,11 +224,10 @@ width: 8%;
 
 `;
 const HeroDesktopGridCircle = styled(HeroDesktopImage)`
-   width: 26%;
-    z-index: 10;
-    bottom: 2px;
-    left: 221px;
-
+  width: 26%;
+  z-index: 10;
+  bottom: 2px;
+  left: 221px;
 
   @media (min-width: 320px) {
     width: 26%;
@@ -250,45 +249,38 @@ const HeroDesktopGridCircle = styled(HeroDesktopImage)`
   }
   @media (min-width: 1200px) {
     width: 50%;
-  z-index: 10;
-  bottom: 101px;
-  left: -108px;
+    z-index: 10;
+    bottom: 101px;
+    left: -108px;
   }
   @media (min-width: 1920px) {
     width: 50%;
-  z-index: 10;
-  bottom: 101;
-  left: -108px;
+    z-index: 10;
+    bottom: 101;
+    left: -108px;
   }
 
-
-//
-
-
+  //
 `;
 const HeroDesktopElipse = styled(HeroDesktopImage)`
-
-width: 50%;
-    z-index: 10;
-    right: 109px;
-    bottom: -173px;
-    position: absolute;
+  width: 50%;
+  z-index: 10;
+  right: 109px;
+  bottom: -173px;
+  position: absolute;
   @media (min-width: 320px) {
-
     width: 50%;
     z-index: 10;
     right: 109px;
     bottom: -173px;
   }
   @media (min-width: 500px) {
- 
-width: 50%;
+    width: 50%;
     z-index: 10;
     right: 109px;
     bottom: -173px;
   }
   @media (min-width: 900px) {
-
     width: 50%;
     z-index: 10;
     right: 109px;
@@ -296,22 +288,18 @@ width: 50%;
   }
   @media (min-width: 1200px) {
     width: 130%;
-  z-index: 10;
-  right: -228px;
-  bottom: -122px;
+    z-index: 10;
+    right: -228px;
+    bottom: -122px;
   }
   @media (min-width: 1920px) {
     width: 130%;
-  z-index: 10;
-  right: -228px;
-  bottom: -122px;
+    z-index: 10;
+    right: -228px;
+    bottom: -122px;
   }
 
-
-//
-
-
-
+  //
 `;
 const Paragraph = styled.p`
   font-size: 1rem;
