@@ -18,7 +18,7 @@ const Contanier = styled.div`
   border: 1px solid red;
   grid-template:
     "headerWrapper" 100px
-    "sliderWrapper" 1fr
+    "sliderWrapper" 14%
     "valuesWrapper" 1fr
     "clientsWrapper" 1fr
     "soonWrapper" 1fr
@@ -97,14 +97,14 @@ export function WrapperContainer() {
   return (
     <Contanier>
       <ContanierHeader>
-        <Header
+         <Header
           header={{
             logo,
             menuItems,
             buttonRegister,
             buttonStart,            
           }}
-        />
+        /> 
       </ContanierHeader>
       <ContanierSlider>
         <Slider
@@ -116,7 +116,7 @@ export function WrapperContainer() {
                 buttonStart,
                 iconButtonStart
             }}
-            />
+            /> 
       </ContanierSlider>
       <ContanierValues>
       <Values
@@ -127,42 +127,42 @@ export function WrapperContainer() {
                 coreIcon,
                 listValues
             }}
-            />
+            /> 
       </ContanierValues>
       <ContanierClients>
-        <Clients
+        {/* <Clients
         clients ={{
           contentBuyer, 
           contentSupplier
         }}
-         />
+         /> */}
       </ContanierClients>
       <ContanierSoon>
-        <Soon
+        {/* <Soon
         soon={{
           textSoon, 
           features
         }}        
-        />
+        /> */}
         </ContanierSoon>
       <ContanierNews>
-        <News
+        {/* <News
         news={{
           imageNews,
           text,
           buttonNews,
           iconButtonStart
         }}
-        />
+        /> */}
         </ContanierNews>
       <ContanierFooter>
-        <Footer
+        {/* <Footer
         footer={{
           image,
           navigationLinks,
           legalLinks
         }}
-        />
+        /> */}
         </ContanierFooter>
     </Contanier>
   );
