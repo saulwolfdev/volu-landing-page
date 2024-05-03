@@ -156,13 +156,13 @@ export function WrapperContainer() {
         /> */}
         </ContanierNews>
       <ContanierFooter>
-        {/* <Footer
+        <Footer
         footer={{
           image,
           navigationLinks,
           legalLinks
         }}
-        /> */}
+        />
         </ContanierFooter>
     </Contanier>
   );

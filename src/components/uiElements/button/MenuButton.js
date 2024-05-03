@@ -71,9 +71,7 @@ const MenuButton = () => {
 
   const closeMenu = () => {
     setIsOpen(false);
-  };
-
-  
+  };  
 
   return (
     <MenuButtonWrapper>
@@ -84,13 +82,13 @@ const MenuButton = () => {
       )}
       <MenuContainer open={isOpen}>
         <ContentItem>
-          <TextButton color="secondary" href="#">
+          <TextButton color="secondary" href={items.text}>
             {items.text}
           </TextButton>
-          <TextButton color="secondary" href="#">
+          <TextButton color="secondary" href={register.text}>
             {register.text}
           </TextButton>
-          <TextButton color="secondary" href="#">
+          <TextButton color="secondary" href={start.text}>
             {start.text}
           </TextButton>
         </ContentItem>
