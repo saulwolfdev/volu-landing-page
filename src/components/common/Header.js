@@ -128,6 +128,8 @@ const NavBarContentLogoMobile = styled.div`
 `;
 const NavBarContentMenuMobile = styled.div`
   grid-area: menuNavbarMobile;
+  position: relative;
+  top: -24px;
 `;
 
 const NavBarContentLogoMobileImg = styled.img`

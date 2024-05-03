@@ -2,123 +2,100 @@ import React, { useState } from "react";
 import mockData from "../../mockData/mockData.json";
 import { TextButton } from "components/uiElements";
 import styled from "styled-components";
+import Burger from "../../../images/burger.svg";
+import Close from "../../../images/close.svg";
 
-export const ContainerFlex = styled.div`
-  position: fixed;
-  width: 100%;
-  top: 0vw;
-  height: 100vh;
-  overflow: hidden;
-`;
-
-export const ContainerMenu = styled.div`
-  display: block;
-  position: absolute;
-  top: 0;
-  right: ${({ isOpen }) => (isOpen ? "0" : "-100vw")};
-  width: 100%;
-  height: 100vh;
-  background: #434343;
-  transition: all 0.5s ease;
-  z-index: 2;
-`;
-
-export const Toggle = styled.input`
-  display: none;
-`;
-
-export const MenuLabel = styled.label`
-  position: fixed;
-  top: 40px;
-  right: 36px;
-  z-index: 3;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-`;
-
-export const Span = styled.span`
-  position: absolute;
-  top: ${({ top }) => top || "0"};
-  width: 30px;
-  height: 5px;
-  background: #009379;
-  transition: all 0.3s ease;
-
-  &:nth-child(2) {
-    top: 10px;
-  }
-
-  &:nth-child(3) {
-    top: 20px;
-  }
-`;
-
-export const CloseIcon = styled.span`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-12%, -60%);
-  font-size: 62px;
-  color: #009379;
-  cursor: pointer;
-`;
-
-export const Ul = styled.ul`
+const MenuButtonWrapper = styled.div`  
   display: flex;
-  position: relative;
-  right: 0%;
-  font-size: 32px;
-  margin-top: 70px;
-  flex-direction: column;
-  color: #009379;
-  align-items: flex-start;
+  justify-content: flex-end;
+  margin-right: 21rem;
+`;
+
+const MenuIcon = styled.img`
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 999;
+  right: 1rem;  
   cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+const MenuContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #434343;
+  color: #fff;
+  z-index: 998;
+  display: ${(props) => (props.open ? "block" : "none")};
+`;
+
+const ContentItem = styled.div`
+position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 48px;
+`;
+
+const CloseButton = styled.img`
+  width: 36px;
+    height: 50px;
+    position: absolute;
+    z-index: 999;
+    right: 1.4rem;
+    cursor: pointer;   
+    &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const MenuButton = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const { buttons } = mockData.header;
 
   const items = buttons[0];
   const register = buttons[1];
   const start = buttons[2];
 
-  const handleToggleMenu = () => {
+  const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  
+
   return (
-    <ContainerFlex>
-      <Toggle type="checkbox" id="btn_menu" />
-      <MenuLabel htmlFor="btn_menu" onClick={handleToggleMenu}>
-        {isOpen ? (
-          <CloseIcon>&times;</CloseIcon>
-        ) : (
-          <>
-            <Span $top="0" id="btn_span_1"></Span>
-            <Span $top="10px" id="btn_span_2"></Span>
-            <Span $top="20px" id="btn_span_3"></Span>
-          </>
-        )}
-      </MenuLabel>
-      <ContainerMenu style={{ right: isOpen ? "0" : "-100vw" }}>
-        <nav>
-          <Ul>
-            <TextButton key={items.id} color="secondary" href="#">
-              {items.text}
-            </TextButton>
-            <TextButton key={register.id} color="secondary" href="#">
-              {register.text}
-            </TextButton>
-            <TextButton key={start.id} color="secondary" href="#">
-              {start.text}
-            </TextButton>
-          </Ul>
-        </nav>
-      </ContainerMenu>
-    </ContainerFlex>
+    <MenuButtonWrapper>
+      {isOpen ? (
+        <CloseButton src={Close} alt="Close Icon" onClick={closeMenu} />
+      ) : (        
+        <MenuIcon src={Burger} alt="Menu Icon" onClick={toggleMenu} />        
+      )}
+      <MenuContainer open={isOpen}>
+        <ContentItem>
+          <TextButton color="secondary" href="#">
+            {items.text}
+          </TextButton>
+          <TextButton color="secondary" href="#">
+            {register.text}
+          </TextButton>
+          <TextButton color="secondary" href="#">
+            {start.text}
+          </TextButton>
+        </ContentItem>
+      </MenuContainer>
+    </MenuButtonWrapper>
   );
 };
 
