@@ -15,7 +15,6 @@ const Contanier = styled.div`
   display: grid;
   min-height: 100vh;
   margin: 0px auto;
-  border: 1px solid red;
   grid-template:
     "headerWrapper" 100px
     "sliderWrapper" 14%
@@ -27,7 +26,6 @@ const Contanier = styled.div`
 `;
 const ContanierHeader = styled.header`
   grid-area: headerWrapper;
-  border: 1px solid green;
   text-align: center;
     display: flex;
     align-items: center;
@@ -41,33 +39,27 @@ const ContanierHeader = styled.header`
 
 const ContanierSlider = styled.section`
   grid-area: sliderWrapper;
-  border: 1px solid orange;  
 `;
 const ContanierValues = styled.section`
   grid-area: valuesWrapper;
-  border: 1px solid purple;
 `;
 const ContanierClients = styled.section`
   grid-area: clientsWrapper;
-  border: 1px solid black;
   display: grid; //agrege un grid para posicionar el contenido
   justify-content: center;
 `;
 const ContanierSoon = styled.section`
   grid-area: soonWrapper;
-  border: 1px solid tomato;
   display: flex;
   justify-content: center;
 `;
 const ContanierNews = styled.section`
   grid-area: newsWrapper;
-  border: 1px solid gray;
   display: flex;
   justify-content: center;
 `;
 const ContanierFooter = styled.footer`
   grid-area: footerWrapper;
-  border: 1px solid rebeccapurple;
 `;
 
 export function WrapperContainer() {
@@ -138,7 +130,7 @@ export function WrapperContainer() {
          />
       </ContanierClients>
       <ContanierSoon>
-        <Soon
+         <Soon
         soon={{
           textSoon, 
           features
@@ -156,7 +148,7 @@ export function WrapperContainer() {
         /> 
         </ContanierNews>
       <ContanierFooter>
-        <Footer
+      <Footer
         footer={{
           image,
           navigationLinks,

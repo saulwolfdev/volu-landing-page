@@ -2,6 +2,114 @@ import React from "react";
 import styled from "styled-components";
 import { Tabs, CardList } from "components/uiElements";
 
+
+
+const ContainerCards = styled.div`
+ width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template:
+    "itemex" 1fr
+    "itemdos" 1fr
+    "itemtres" 1fr
+    "itemcuatro" 1fr
+    "itemcinco" 1fr/
+    1fr;
+  gap: 30px;
+  padding: 60px 0;
+  @media (min-width: 320px) {
+    width: 100%;
+    grid-template:
+      "itemex" 1fr
+      "itemdos" 1fr
+      "itemtres" 1fr
+      "itemcuatro" 1fr
+      "itemcinco" 1fr/
+      1fr;
+    padding: 30px 0;
+  }
+  @media (min-width: 500px) {
+    width: 100%;
+    grid-template:
+      "itemex" 1fr
+      "itemdos" 1fr
+      "itemtres" 1fr
+      "itemcuatro" 1fr
+      "itemcinco" 1fr/
+      1fr;
+    padding: 30px 0;
+  }
+  @media (min-width: 900px) {
+    width: 1240px;
+    grid-template:
+      "itemex" 1fr
+      "itemdos" 1fr
+      "itemtres" 1fr
+      "itemcuatro" 1fr
+      "itemcinco" 1fr/
+      1fr;
+    padding: 30px 0;
+  }
+  @media (min-width: 1200px) {
+    width: 1240px;
+    grid-template:
+      "itemex    itemex      itemdos" 1fr
+      "itemtres  itemcuatro  itemcinco" 1fr/
+      1fr 1fr 1fr;
+    gap: 30px;
+    padding: 60px 0;
+  }
+  @media (min-width: 1920px) {
+    width: 1240px;
+    grid-template:
+      "itemex    itemex      itemdos" 1fr
+      "itemtres  itemcuatro  itemcinco" 1fr/
+      1fr 1fr 1fr;
+    gap: 30px;
+    padding: 60px 0;
+  }
+`;
+
+
+
+const ContainerTabsClients=styled.div`
+width: 100%;
+margin: 0 auto;
+
+@media (min-width: 320px) {
+    width: 100%;
+    margin: 0 auto;
+
+  }
+  @media (min-width: 500px) {
+    width: 100%;
+
+  }
+  @media (min-width: 900px) {
+    width: 1240px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1200px) {
+    width: 1240px;
+    margin: 0 auto;
+
+  }
+  @media (min-width: 1920px) {
+    width: 1240px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+  }
+
+`;
+
+
+
+
+
 const Title = styled.h1`
   font-size: 1.8rem;
   font-weight: 900;
@@ -24,16 +132,16 @@ const Title = styled.h1`
   }
   @media (min-width: 1200px) {
     text-align: center;
-    font-size: 3.375rem;
+    font-size: 3rem;
   }
   @media (min-width: 1920px) {
     text-align: center;
-    font-size: 3.375rem;
+    font-size: 3rem;
   }
 `;
 
 const Subtible = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 16px 0;
   text-align: center;
   line-height: 30px;
@@ -162,9 +270,6 @@ const ContainerClientsFeatures = styled.ul`
   display: block;
 `;
 
-const ContaninerClientSupplier = styled.div`
-
-`;
 
 export const Clients = ({clients}) => {
 
@@ -181,7 +286,7 @@ console.log("contentSupplier",contentSupplier)
     {
       label: 'Comprador',
       content: 
-      <ContaninerClientTabs>
+      <ContainerTabsClients>
         <ContainerClientTitles>
           <Title>{buyerTitle}</Title>
           <Subtible>
@@ -202,12 +307,12 @@ console.log("contentSupplier",contentSupplier)
               ))}
           </ContainerClientsFeatures>
         </ContaninerClientBuyer>
-      </ContaninerClientTabs>
+      </ContainerTabsClients>
     },
     {
       label: 'Proveedor',
       content:       
-      <ContaninerClientSupplier>
+      <ContainerTabsClients>
       <ContentSupplier>
         <Title>{supplierTitle}</Title>
           <Subtible>
@@ -230,7 +335,7 @@ console.log("contentSupplier",contentSupplier)
               ))}
 
           </ContentListSupplier>
-      </ContaninerClientSupplier>
+      </ContainerTabsClients>
     }
   ];
 

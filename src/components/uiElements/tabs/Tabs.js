@@ -6,11 +6,9 @@ const Container = styled.div`
 `;
 
 const TabContainer = styled.div`
-  display: flex;
-  width: 1046px;
-  height: 84px;
-  justify-content: space-between;
-  padding: 0px 100px;
+display: flex;
+justify-content: center;
+align-items: center;
 `;
 
 const Tab = styled.div`
@@ -21,7 +19,6 @@ const Tab = styled.div`
   padding: 24px 0;
   text-align: center;
   border-bottom: ${props => props.active ? '2px solid #009379' : 'none'};
-  font-family: PublicSans;
   font-size: 24px;
   cursor: pointer;  
   color: ${props => props.active ? "#009379" : "#BABABC"};
@@ -29,7 +26,6 @@ const Tab = styled.div`
 
 const ContentContainer = styled.div`
   width: 100%;
-  margin-top: 122px;
 `;
 
 const Tabs = ({ tabs }) => {

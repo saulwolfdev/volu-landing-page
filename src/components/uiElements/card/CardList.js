@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {TitleCard,SubtitleCard, DescriptionCard } from './CardStyles';
 const Card = styled.div`  
   /* height: 207px; */
   width: 509px;  
@@ -12,8 +12,8 @@ const Card = styled.div`
 `;
 
 const Content = styled.div`
-margin:12px
-`
+margin:12px;
+`;
 
 const Icon = styled.img`
   display: block;
@@ -52,9 +52,9 @@ const CardList = ({ icon, title, subtitle, description }) => {
       <Card>   
         <Content>
         <Icon src={`images/${icon}`}  alt={title} />
-        <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
-        <Description>{description}</Description>
+        <TitleCard>{title}</TitleCard>
+        <SubtitleCard>{subtitle}</SubtitleCard>
+        <DescriptionCard>{description}</DescriptionCard>
         </Content> 
       </Card>
     );

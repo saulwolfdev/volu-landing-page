@@ -17,7 +17,6 @@ const ContainerCards = styled.div`
     1fr;
   gap: 30px;
   padding: 60px 0;
-  border: 1px solid green;
   @media (min-width: 320px) {
     width: 100%;
     grid-template:
@@ -76,7 +75,6 @@ const ContainerItemU = styled.div`
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   padding: 30px;
- border: 1px solid #ebebeb;
 `;
 const ContainerItemD = styled(ContainerItemU)`
   grid-area: itemdos;
