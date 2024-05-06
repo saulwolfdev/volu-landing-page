@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Button } from "components/uiElements";
 
-const widthsMobile = ['320px', '500px', '900px', '1200px'];
+const widthsMobile = ["320px", "500px", "900px", "1200px"];
 
 function checkMediaQueries() {
-  const matchedWidth = widthsMobile.find(width => {
+  const matchedWidth = widthsMobile.find((width) => {
     return window.matchMedia(`(max-width: ${width})`).matches;
   });
 
@@ -14,97 +14,99 @@ function checkMediaQueries() {
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 55.6% 44.4%; 
-  grid-template-rows: auto; 
+  grid-template-columns: 55.6% 44.4%;
+  grid-template-rows: auto;
   width: 100%;
-  height: 52%;  
+  height: 52%;
   margin: 0%;
   position: relative;
   background-color: #f8f9ff;
 
   @media (min-width: 320px) {
-    grid-template-columns: 100%; 
+    grid-template-columns: 100%;
     margin: 0% 3%;
     height: 50%;
   }
-@media (min-width: 500px) {
-  grid-template-columns: 100%; 
-  margin: 0% 3%;
-  height: 50%;
+  @media (min-width: 500px) {
+    grid-template-columns: 100%;
+    margin: 0% 3%;
+    height: 50%;
   }
-  @media (min-width: 900px) {    
-    grid-template-columns: 100%;   
-    height: 50%;  
+  @media (min-width: 900px) {
+    grid-template-columns: 100%;
+    height: 50%;
   }
   @media (min-width: 1200px) {
-    grid-template-columns: 55.6% 44.4%; 
+    grid-template-columns: 55.6% 44.4%;
     height: 51.4%;
-    width: 1440px;   
+    width: 1440px;
+    top: 7%;
   }
   @media (min-width: 1920px) {
-    grid-template-columns: 55.6% 44.4%;     
-    width: 1440px;  
-    height: 51.4%; 
+    grid-template-columns: 55.6% 44.4%;
+    width: 1440px;
+    height: 51.4%;
+    top: 7%;
   }
 `;
 
-const NewsConainer = styled.div`  
-  margin: 33.5px 0 32.5px 84px;  
+const NewsConainer = styled.div`
+  margin: 33.5px 0 32.5px 84px;
 
   @media (min-width: 320px) {
-    margin: 0px; 
+    margin: 0px;
   }
-@media (min-width: 500px) {
-  margin: 0px; 
+  @media (min-width: 500px) {
+    margin: 0px;
   }
   @media (min-width: 900px) {
-    margin: 0px;  
+    margin: 0px;
   }
   @media (min-width: 1200px) {
-    margin: 33.5px 0 32.5px 84px;  
+    margin: 33.5px 0 32.5px 84px;
   }
   @media (min-width: 1920px) {
-    margin: 33.5px 0 32.5px 84px;  
+    margin: 33.5px 0 32.5px 84px;
   }
-/* @media (max-width: 375px) {
+  /* @media (max-width: 375px) {
   margin: 0%;
   display: flex;
   justify-content: center; 
   } */
-`
+`;
 
-const LeftSection = styled.div`  
+const LeftSection = styled.div`
   margin: 24px;
 
   @media (min-width: 320px) {
-   display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   @media (min-width: 500px) {
     display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (min-width: 900px) {  
-}
-@media (min-width: 1200px) {
-}
-@media (min-width: 1920px) {
-}  
-`;
-
-const TextContainer = styled.div`  
-  width: 93.9%;  
-
-  @media (min-width: 320px) {
-    width: 32.9%
-  }
-@media (min-width: 500px) {
-  width: 34.9%
+    flex-direction: column;
+    align-items: center;
   }
   @media (min-width: 900px) {
-    width: 34.9%
+  }
+  @media (min-width: 1200px) {
+  }
+  @media (min-width: 1920px) {
+  }
+`;
+
+const TextContainer = styled.div`
+  width: 93.9%;
+
+  @media (min-width: 320px) {
+    width: 32.9%;
+  }
+  @media (min-width: 500px) {
+    width: 34.9%;
+  }
+  @media (min-width: 900px) {
+    width: 34.9%;
   }
   @media (min-width: 1200px) {
     width: 100%;
@@ -126,45 +128,45 @@ const Image = styled.img`
   position: absolute;
   right: 2%;
   bottom: 0px;
- 
+
   @media (min-width: 320px) {
     width: auto;
-    height: 45%; 
-    right: 50%; 
+    height: 45%;
+    right: 50%;
     left: 50%;
-    transform: translateX(-50%);  
+    transform: translateX(-50%);
   }
   @media (min-width: 500px) {
     width: auto;
-    height: 45%; 
-    right: 50%; 
+    height: 45%;
+    right: 50%;
     left: 50%;
-    transform: translateX(-50%);  
+    transform: translateX(-50%);
   }
   @media (min-width: 900px) {
     width: auto;
-    height: 45%; 
-    right: 50%; 
+    height: 45%;
+    right: 50%;
     left: 50%;
-    transform: translateX(-50%);  
+    transform: translateX(-50%);
   }
   @media (min-width: 1200px) {
     width: auto;
-  height: 113.8%;
-  position: absolute;
-  right: 2%;
-  left: auto;
-  transform: none;
-  bottom: 0px;
+    height: 113.8%;
+    position: absolute;
+    right: 2%;
+    left: auto;
+    transform: none;
+    bottom: 0px;
   }
   @media (min-width: 1920px) {
     width: auto;
-  height: 113.8%;
-  position: absolute;
-  right: 2%;
-  left: auto;
-  transform: none;
-  bottom: 0px;  
+    height: 113.8%;
+    position: absolute;
+    right: 2%;
+    left: auto;
+    transform: none;
+    bottom: 0px;
   }
 `;
 
@@ -208,10 +210,10 @@ export const News = ({ news }) => {
       setMatchedWidth(checkMediaQueries());
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -219,25 +221,33 @@ export const News = ({ news }) => {
 
   return (
     <Container>
-      <NewsConainer> 
-        <LeftSection>  
-         <TextContainer>
+      <NewsConainer>
+        <LeftSection>
+          <TextContainer>
             <Title>{text.title}</Title>
             <CashContent>
-              <CashText>{text.titleCash}</CashText>              
+              <CashText>{text.titleCash}</CashText>
               <Text>{text.titleFinal}</Text>
             </CashContent>
             <Description>{text.description}</Description>
-        
-            <Button size={size}  key={buttonNews.id} icon={iconButtonStart} style={{margin: "0px"}}> 
+
+            <Button
+              size={size}
+              key={buttonNews.id}
+              icon={iconButtonStart}
+              style={{ margin: "0px" }}
+            >
               Lo quiero
-            </Button>   
-            </TextContainer>      
-      </LeftSection>
-      <RightSection>
-        <Image src={`images/${imageNews.imagePath}`} alt="Imagen descriptiva" />
-      </RightSection>
+            </Button>
+          </TextContainer>
+        </LeftSection>
+        <RightSection>
+          <Image
+            src={`images/${imageNews.imagePath}`}
+            alt="Imagen descriptiva"
+          />
+        </RightSection>
       </NewsConainer>
     </Container>
   );
-}; 
+};

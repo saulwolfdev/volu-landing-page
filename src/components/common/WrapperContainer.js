@@ -138,12 +138,12 @@ export function WrapperContainer() {
          /> */}
       </ContanierClients>
       <ContanierSoon>
-        {/* <Soon
+        <Soon
         soon={{
           textSoon, 
           features
         }}        
-        /> */}
+        />
         </ContanierSoon>
       <ContanierNews>
         <News

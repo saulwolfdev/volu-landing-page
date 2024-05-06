@@ -35,8 +35,10 @@ const ListContainer = styled.div`
 `;
 
 const ListItem = styled.div`
-  width: 1038px;
-  height: 79px;
+  /* width: 1038px;
+  height: 79px; */
+  width: 100%;
+    height: auto;
   display: flex;
   align-items: center;
 `;
