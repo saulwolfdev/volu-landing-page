@@ -146,14 +146,14 @@ export function WrapperContainer() {
         /> */}
         </ContanierSoon>
       <ContanierNews>
-        {/* <News
+        <News
         news={{
           imageNews,
           text,
           buttonNews,
           iconButtonStart
         }}
-        /> */}
+        />
         </ContanierNews>
       <ContanierFooter>
         <Footer

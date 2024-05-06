@@ -13,7 +13,13 @@ const FooterContainer = styled.div`
   background-color: #333333;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
+  margin: 0%;
+  @media (min-width: 1920px) {
+    width: 1440px;   
+    display: flex;
+  justify-content: center;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -23,7 +29,7 @@ const TextContainer = styled.div`
   flex-direction: column;
   align-items: center;
   color: #ebebeb;
-  margin: 40px 42px;
+  margin: 40px 120px;
 `;
 
 const Image = styled.img`
