@@ -44,6 +44,7 @@ const ContanierValues = styled.section`
   grid-area: valuesWrapper;
 `;
 const ContanierClients = styled.section`
+  margin: 120px 0;
   grid-area: clientsWrapper;
   display: grid; //agrege un grid para posicionar el contenido
   justify-content: center;
