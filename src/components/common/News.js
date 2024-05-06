@@ -120,9 +120,9 @@ const TextContainer = styled.div`
 `;
 
 const RightSection = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
 `;
 
 const Image = styled.img`
@@ -155,7 +155,7 @@ const Image = styled.img`
   }
   @media (min-width: 1200px) {
     width: auto;
-    height: 113.8%;
+    height:auto;
     position: absolute;
     right: 2%;
     left: auto;
@@ -163,13 +163,11 @@ const Image = styled.img`
     bottom: 0px;
   }
   @media (min-width: 1920px) {
-    width: auto;
-    height: 113.8%;
-    position: absolute;
-    right: 2%;
-    left: auto;
-    transform: none;
-    bottom: 0px;
+        height: auto;
+        position: absolute;
+        right: -700px;
+        width: 85%;
+    top: -550px;
   }
 `;
 

@@ -247,11 +247,9 @@ display: flex;
 
 const ContainerImageSupplier = styled.img`
     display: block;
-    width: 68%;
-    height: 100vh;
-    position: relative;
-    top: 1px;
-    margin-top: 102px;
+    width: auto;
+    height: auto;
+
 `
 
 const TitleTwo = styled.h2`
