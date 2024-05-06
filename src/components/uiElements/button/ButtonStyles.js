@@ -2,19 +2,19 @@ import styled from "styled-components";
 
 export const BaseButton = styled.button.attrs((props) => ({
   outline: undefined,
-}))`  
-   display: flex;
-    align-items: center;
-    align-content: center;
-    font-size: 16px;    
-    padding: 16px 50px;
-    text-align: center;
-    background-color:#009379;
-    color: #ffffff;
-    border-radius: 20px;
-    border: 0;
-    margin:0px 8px;
-    cursor: pointer; 
+}))`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 16px 50px;
+  text-align: center;
+  background-color: #009379;
+  color: #ffffff;
+  border-radius: 20px;
+  border: 0;
+  margin: 0px 8px;
+  cursor: pointer;
 
   ${({ color }) =>
     color === "primary" &&
@@ -56,6 +56,15 @@ export const BaseButton = styled.button.attrs((props) => ({
     padding: 18px 50px;
     width: 205px;
     height: 60px;
+  `}
+
+${({ size }) =>
+    size === "fullwidth" &&
+    `
+    font-size: 16px;
+    padding: 18px 50px;
+    width: 100%;
+    height: 60px;    
   `}
 `;
 

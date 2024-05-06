@@ -205,7 +205,7 @@ width: 8%;
     width: 8%;
     z-index: 10;
     top: -46px;
-    left: 366px;lute;
+    left: 366px;
   z-index: 20;
   }
   @media (min-width: 1200px) {

@@ -153,7 +153,11 @@ export function WrapperContainer() {
           buttonNews,
           iconButtonStart
         }}
+<<<<<<< HEAD
         /> 
+=======
+        />
+>>>>>>> new-version-ui-v2
         </ContanierNews>
       <ContanierFooter>
         <Footer
@@ -162,7 +166,11 @@ export function WrapperContainer() {
           navigationLinks,
           legalLinks
         }}
+<<<<<<< HEAD
         /> 
+=======
+        />
+>>>>>>> new-version-ui-v2
         </ContanierFooter>
     </Contanier>
   );
