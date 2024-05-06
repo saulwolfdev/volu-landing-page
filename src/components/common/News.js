@@ -18,23 +18,23 @@ const Container = styled.div`
   grid-template-rows: auto;
   width: 100%;
   height: 52%;
-  margin: 0%;
+  /* margin: 0%; */
   position: relative;
   background-color: #f8f9ff;
 
   @media (min-width: 320px) {
     grid-template-columns: 100%;
-    margin: 0% 3%;
-    height: 50%;
+    /* margin: 0% 3%; */
+    height: 80%;
   }
   @media (min-width: 500px) {
     grid-template-columns: 100%;
-    margin: 0% 3%;
-    height: 50%;
+    /* margin: 0% 3%; */
+    height: 80%;
   }
   @media (min-width: 900px) {
     grid-template-columns: 100%;
-    height: 50%;
+    height: 80%;
   }
   @media (min-width: 1200px) {
     grid-template-columns: 55.6% 44.4%;
@@ -100,13 +100,16 @@ const TextContainer = styled.div`
   width: 93.9%;
 
   @media (min-width: 320px) {
-    width: 32.9%;
+    width: 52%;
+    margin: 24px;
   }
   @media (min-width: 500px) {
-    width: 34.9%;
+    width: 52%;;
+    margin: 24px;
   }
   @media (min-width: 900px) {
-    width: 34.9%;
+    width: 52%;
+    margin: 24px;
   }
   @media (min-width: 1200px) {
     width: 100%;
@@ -171,9 +174,21 @@ const Image = styled.img`
 `;
 
 const Title = styled.h1`
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 36px;
   color: #363837;
+  @media (min-width: 320px) {
+    font-size: 3rem;
+    line-height: 50px;
+  }
+@media (min-width: 500px) {
+  font-size: 3rem;
+  line-height: 50px;
+  }
+  @media (min-width: 900px) {
+    font-size: 3rem;
+    line-height: 50px;
+  }
 `;
 const CashContent = styled.div`
   display: flex;
@@ -182,16 +197,34 @@ const CashContent = styled.div`
 
 const CashText = styled.h2`
   margin-right: 8px;
-  font-size: 48px;
+  font-size: 3rem;
   margin-top: 16px;
+  @media (min-width: 320px) {
+    font-size: 4rem;
+  }
+@media (min-width: 500px) {
+  font-size: 4rem;
+  }
+  @media (min-width: 900px) {
+    font-size: 4rem;
+  }
 `;
 
 const Text = styled.p`
-  font-size: 18px;
+  font-size:1rem;
   font-weight: 600;
+  @media (min-width: 320px) {
+    font-size: 1.5rem;
+  }
+@media (min-width: 500px) {
+  font-size: 1.5rem;
+  }
+  @media (min-width: 900px) {
+    font-size: 1.5rem;
+  }
 `;
 const Description = styled.p`
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 27px;
   font-weight: normal;
   font-stretch: normal;
@@ -199,6 +232,15 @@ const Description = styled.p`
   color: #363837;
   margin-bottom: 24px;
   margin-top: 12px;
+  @media (min-width: 320px) {
+    font-size: 1.5rem;
+  }
+@media (min-width: 500px) {
+  font-size: 1.5rem;
+  }
+  @media (min-width: 900px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const News = ({ news }) => {
