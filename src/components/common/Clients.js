@@ -256,8 +256,7 @@ export const Clients = ({ clients }) => {
     {
       label: "Proveedor",
       content: (
-        <ContaninerClientTabs>
-          
+        <ContaninerClientTabs>          
             <ContentSupplier>
               <Title>{supplierTitle}</Title>
               <Subtible>{supplierSubtitle}</Subtible>
@@ -270,14 +269,14 @@ export const Clients = ({ clients }) => {
             <ContentListSupplier>
               <TitleTwo>{contentSupplier.title2}</TitleTwo>
               <Subtible>{contentSupplier.subtitle2}</Subtible>
-              {contentSupplier.listSupplier.access.map((step) => (
+              {/* {contentSupplier.listSupplier.access.map((step) => (
                 <CardList
                   key={step.id}
                   icon={step.iconPath}
                   title={step.title}
                   description={step.description}
                 />
-              ))}
+              ))} */}
             </ContentListSupplier>
           </ContaninerClientSupplier>
         </ContaninerClientTabs>

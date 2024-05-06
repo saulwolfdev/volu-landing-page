@@ -45,7 +45,7 @@ const Container = styled.div`
   @media (min-width: 1920px) {
     grid-template-columns: 55.6% 44.4%;
     width: 1440px;
-    height: 47%;
+    height: 37.8%;
     top: 7%;
   }
 `;
