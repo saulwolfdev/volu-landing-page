@@ -44,7 +44,7 @@ const ListItem = styled.div`
 const Icon = styled.img`
   width: 79px;
   height: 79px;
-  margin-right: 24px
+  margin-right: 24px;
 `;
 
 const ItemTitle = styled.h2`

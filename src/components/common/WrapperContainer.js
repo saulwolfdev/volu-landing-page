@@ -130,39 +130,39 @@ export function WrapperContainer() {
             /> 
       </ContanierValues>
       <ContanierClients>
-        {/* <Clients
+         <Clients
         clients ={{
           contentBuyer, 
           contentSupplier
         }}
-         /> */}
+         />
       </ContanierClients>
       <ContanierSoon>
-        {/* <Soon
+        <Soon
         soon={{
           textSoon, 
           features
         }}        
-        /> */}
+        />
         </ContanierSoon>
       <ContanierNews>
-        {/* <News
+        <News
         news={{
           imageNews,
           text,
           buttonNews,
           iconButtonStart
         }}
-        /> */}
+        /> 
         </ContanierNews>
       <ContanierFooter>
-        {/* <Footer
+        <Footer
         footer={{
           image,
           navigationLinks,
           legalLinks
         }}
-        /> */}
+        /> 
         </ContanierFooter>
     </Contanier>
   );
