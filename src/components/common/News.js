@@ -38,14 +38,14 @@ const Container = styled.div`
   }
   @media (min-width: 1200px) {
     grid-template-columns: 55.6% 44.4%;
-    height: 51.4%;
+    height: 47%;
     width: 1440px;
     top: 7%;
   }
   @media (min-width: 1920px) {
     grid-template-columns: 55.6% 44.4%;
     width: 1440px;
-    height: 51.4%;
+    height: 47%;
     top: 7%;
   }
 `;
@@ -189,6 +189,15 @@ const Title = styled.h1`
     font-size: 3rem;
     line-height: 50px;
   }
+  @media (min-width: 1200px) {
+    font-size: 1.5rem;
+  line-height: 36px;
+}
+@media (min-width: 1920px) {
+  font-size: 1.5rem;
+  line-height: 36px;
+}
+  
 `;
 const CashContent = styled.div`
   display: flex;
@@ -208,6 +217,12 @@ const CashText = styled.h2`
   @media (min-width: 900px) {
     font-size: 4rem;
   }
+  @media (min-width: 1200px) {
+    font-size: 3rem;
+}
+@media (min-width: 1920px) {
+  font-size: 3rem;
+}
 `;
 
 const Text = styled.p`
@@ -222,6 +237,12 @@ const Text = styled.p`
   @media (min-width: 900px) {
     font-size: 1.5rem;
   }
+  @media (min-width: 1200px) {
+    font-size:1rem;
+}
+@media (min-width: 1920px) {
+  font-size:1rem;
+}
 `;
 const Description = styled.p`
   font-size: 1rem;
@@ -241,6 +262,12 @@ const Description = styled.p`
   @media (min-width: 900px) {
     font-size: 1.5rem;
   }
+  @media (min-width: 1200px) {
+    font-size: 1rem;
+}
+@media (min-width: 1920px) {
+  font-size: 1rem;
+}
 `;
 
 export const News = ({ news }) => {

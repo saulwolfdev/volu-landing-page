@@ -55,12 +55,12 @@ const ContainerClientTitles = styled.div`
   height: 100%;
   margin-bottom: 16px;
 `;
-const ContaninerClientBuyer = styled.div` 
-    width: 100%;
-    display: grid;
-    grid-template-areas: "list";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+const ContaninerClientBuyer = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-areas: "list";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   @media (min-width: 320px) {
     display: grid;
     grid-template-areas: "list";
@@ -87,7 +87,7 @@ const ContaninerClientBuyer = styled.div`
   }
   @media (min-width: 1920px) {
     display: grid;
-    grid-template-areas:"image list";
+    grid-template-areas: "image list";
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
     margin-top: 102px;
@@ -113,85 +113,133 @@ const ContainerClientsImage = styled.img`
   }
   @media (min-width: 1200px) {
     grid-area: image;
-  display: block;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  z-index: 10;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 10;
   }
   @media (min-width: 1920px) {
     grid-area: image;
-  display: block;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  z-index: 10;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 10;
   }
 `;
 
-const ContentSupplier = styled.div`
-width: 1280px;
-height: 781px;
-display: flex;
-    flex-direction: column;
-    align-items: center;
+const ContentSupplier = styled.div`  
+  width: 100%;
+  height: 100%;
+  margin-bottom: 16px;
 `;
 
 const ContainerImageSupplier = styled.img`
-    display: block;
-    width: 68%;
-    height: 100vh;
-    position: relative;
-    top: 1px;
-    margin-top: 102px;
-`
+  display: block;
+  width: 68%;
+  height: 100vh;
+  position: relative;
+  top: 1px;
+  margin-top: 102px;
+`;
 
 const TitleTwo = styled.h2`
-color: #181919;
-text-align: center;
-font-size: 32px;
-    line-height: 40px;
+  color: #181919;
+  text-align: center;
+  font-size: 32px;
+  line-height: 40px;
 `;
 
 const ContentListSupplier = styled.div`
-margin-top: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "list";
+  
+  grid-template-rows: 1fr;
+  @media (min-width: 320px) {
+    display: flex;
+        flex-direction: column;
+  }
+  @media (min-width: 500px) {
+    display: flex;
+        flex-direction: column;
+  }
+  @media (min-width: 900px) {
+    display: grid;
+    display: flex;
+        flex-direction: column;
+  }
+  @media (min-width: 1200px) {
+    display: flex;
+        flex-direction: column;
+  }
+  @media (min-width: 1920px) {
+    display: flex;
+        flex-direction: column;
+  }
 `;
 
-const ContainerClientsFeatures = styled.ul`
-  grid-area: list;
-  display: block;
+const ContainerClientsFeatures = styled.ul`  
+  width: auto;
+  height: 100vh;
 `;
 
 const ContaninerClientSupplier = styled.div`
-
+width: 100%;
+  display: grid;
+  grid-template-areas: "list";
+  
+  grid-template-rows: 1fr;
+  @media (min-width: 320px) {
+    display: flex;
+        flex-direction: column;
+  }
+  @media (min-width: 500px) {
+    display: flex;
+        flex-direction: column;
+  }
+  @media (min-width: 900px) {
+    display: grid;
+    display: flex;
+        flex-direction: column;
+  }
+  @media (min-width: 1200px) {
+    display: flex;
+        flex-direction: column;
+  }
+  @media (min-width: 1920px) {
+    display: flex;
+        flex-direction: column;
+  }
 `;
 
-export const Clients = ({clients}) => {
+export const Clients = ({ clients }) => {
+  const { contentBuyer, contentSupplier } = clients;
 
-  const { contentBuyer, contentSupplier } = clients
+  const buyerTitle = contentBuyer.title;
+  const buyerSubtitle = contentBuyer.subtitle;
 
-  const buyerTitle = contentBuyer.title
-  const buyerSubtitle = contentBuyer.subtitle
-
-  const supplierTitle = contentSupplier.title
-  const supplierSubtitle = contentSupplier.subtitle
-  console.log("contentBuyer",contentBuyer)
-console.log("contentSupplier",contentSupplier)
+  const supplierTitle = contentSupplier.title;
+  const supplierSubtitle = contentSupplier.subtitle;
+  console.log("contentBuyer", contentBuyer);
+  console.log("contentSupplier", contentSupplier);
   const tabs = [
     {
-      label: 'Comprador',
-      content: 
-      <ContaninerClientTabs>
-        <ContainerClientTitles>
-          <Title>{buyerTitle}</Title>
-          <Subtible>
-            {buyerSubtitle}
-          </Subtible>
-        </ContainerClientTitles>
-        <ContaninerClientBuyer>
-          <ContainerClientsImage src={`images/${contentBuyer.image.buyerPath}`} alt={contentBuyer.image.altText} />
-          <ContainerClientsFeatures>
-          {contentBuyer.listBuyer.steps.map((step) => (
+      label: "Comprador",
+      content: (
+        <ContaninerClientTabs>
+          <ContainerClientTitles>
+            <Title>{buyerTitle}</Title>
+            <Subtible>{buyerSubtitle}</Subtible>
+          </ContainerClientTitles>
+          <ContaninerClientBuyer>
+            <ContainerClientsImage
+              src={`images/${contentBuyer.image.buyerPath}`}
+              alt={contentBuyer.image.altText}
+            />
+            <ContainerClientsFeatures>
+              {contentBuyer.listBuyer.steps.map((step) => (
                 <CardList
                   key={step.id}
                   icon={step.iconPath}
@@ -200,41 +248,42 @@ console.log("contentSupplier",contentSupplier)
                   description={step.description}
                 />
               ))}
-          </ContainerClientsFeatures>
-        </ContaninerClientBuyer>
-      </ContaninerClientTabs>
+            </ContainerClientsFeatures>
+          </ContaninerClientBuyer>
+        </ContaninerClientTabs>
+      ),
     },
     {
-      label: 'Proveedor',
-      content:       
-      <ContaninerClientSupplier>
-      <ContentSupplier>
-        <Title>{supplierTitle}</Title>
-          <Subtible>
-            {supplierSubtitle}
-          </Subtible>
-          <ContainerImageSupplier src={`images/${contentSupplier.image.supplierPath}`} alt={contentSupplier.image.altText} />
-          </ContentSupplier>
-          <ContentListSupplier>
-          <TitleTwo>{contentSupplier.title2}</TitleTwo>
-          <Subtible>
-            {contentSupplier.subtitle2}
-          </Subtible>
-          {contentSupplier.listSupplier.access.map((step) => (
+      label: "Proveedor",
+      content: (
+        <ContaninerClientTabs>
+          
+            <ContentSupplier>
+              <Title>{supplierTitle}</Title>
+              <Subtible>{supplierSubtitle}</Subtible>
+            </ContentSupplier>
+            <ContaninerClientSupplier>
+              <ContainerClientsImage
+                src={`images/${contentSupplier.image.supplierPath}`}
+                alt={contentSupplier.image.altText}
+              />
+            <ContentListSupplier>
+              <TitleTwo>{contentSupplier.title2}</TitleTwo>
+              <Subtible>{contentSupplier.subtitle2}</Subtible>
+              {contentSupplier.listSupplier.access.map((step) => (
                 <CardList
                   key={step.id}
                   icon={step.iconPath}
-                  title={step.title}                  
+                  title={step.title}
                   description={step.description}
                 />
               ))}
-
-          </ContentListSupplier>
-      </ContaninerClientSupplier>
-    }
+            </ContentListSupplier>
+          </ContaninerClientSupplier>
+        </ContaninerClientTabs>
+      ),
+    },
   ];
 
-  return (
-    <Tabs tabs={tabs} />
-  );
+  return <Tabs tabs={tabs} />;
 };

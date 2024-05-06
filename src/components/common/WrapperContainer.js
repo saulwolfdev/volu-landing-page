@@ -130,12 +130,12 @@ export function WrapperContainer() {
             /> 
       </ContanierValues>
       <ContanierClients>
-        {/* <Clients
+        <Clients
         clients ={{
           contentBuyer, 
           contentSupplier
         }}
-         /> */}
+         />
       </ContanierClients>
       <ContanierSoon>
         <Soon

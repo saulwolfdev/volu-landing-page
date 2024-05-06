@@ -7,10 +7,10 @@ const Container = styled.div`
 
 const TabContainer = styled.div`
   display: flex;
-  width: 1046px;
+  width: auto;
   height: 84px;
   justify-content: space-between;
-  padding: 0px 100px;
+  padding: 0px 100px;  
 `;
 
 const Tab = styled.div`
