@@ -50,7 +50,7 @@ const Container = styled.div`
   }
 `;
 
-const NewsConainer = styled.div`
+const NewsContainer = styled.div`
   margin: 33.5px 0 32.5px 84px;
 
   @media (min-width: 320px) {
@@ -221,7 +221,7 @@ export const News = ({ news }) => {
 
   return (
     <Container>
-      <NewsConainer>
+      <NewsContainer>
         <LeftSection>
           <TextContainer>
             <Title>{text.title}</Title>
@@ -247,7 +247,7 @@ export const News = ({ news }) => {
             alt="Imagen descriptiva"
           />
         </RightSection>
-      </NewsConainer>
+      </NewsContainer>
     </Container>
   );
 };
