@@ -19,7 +19,7 @@ const Contanier = styled.div`
   grid-template:
     "headerWrapper" 100px
     "sliderWrapper" 14%
-    "valuesWrapper" 1fr
+    "valuesWrapper" .5fr
     "clientsWrapper" 1fr
     "soonWrapper" 1fr
     "newsWrapper" 1fr

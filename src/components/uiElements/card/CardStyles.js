@@ -71,7 +71,7 @@ export const SubtitleCard = styled.h4`
 `;
 
 export const DescriptionCard = styled.p`
-  font-size: 1em;
+  font-size: 1.1rem;
   line-height:24px;
   color: rgba(54, 56, 55, 0.6);
 `;

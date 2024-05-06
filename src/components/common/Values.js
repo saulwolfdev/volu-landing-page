@@ -116,34 +116,31 @@ export const Values = ({ values }) => {
             /> 
       </ContainerItemD>
       <ContainerItemT>
-        {/* <MultiCard
+         <MultiCard
                 icon={mission.iconPath}
                 altText={mission.altText}
                 title={mission.title}
                 subtitle={mission.subtitle}
                 description={mission.description}
-            /> */}
-        <h1>SMALL CARD</h1>
+            />
       </ContainerItemT>
       <ContainerItemC>
-        {/* <MultiCard
+        <MultiCard
                 icon={vision.iconPath}
                 altText={vision.altText}
                 title={vision.title}
                 subtitle={vision.subtitle}
                 description={vision.description}
-            /> */}
-        <h1>SMALL CARD</h1>
+            />
       </ContainerItemC>
       <ContainerItemCi>
-        {/* <MultiCard
+        <MultiCard
                 icon={promise.iconPath}
                 altText={promise.altText}
                 title={promise.title}
                 subtitle={promise.subtitle}
                 description={promise.description}
-            /> */}
-        <h1>SMALL CARD</h1>
+            />
       </ContainerItemCi>
     </ContainerCards>
   );
