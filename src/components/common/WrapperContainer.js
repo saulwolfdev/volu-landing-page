@@ -64,13 +64,13 @@ const ContanierFooter = styled.footer`
 `;
 
 export function WrapperContainer() {
-  const { logo, buttons } = mockData.header;
-  const { title, subtitle, description } = mockData.slider;
-  const { coreValue, listValues } = mockData.values;
-  const { contentBuyer, contentSupplier } = mockData.clients;
-  const { imageNews, text, buttonNews } =  mockData.news;
-  const { image, navigationLinks, legalLinks } =  mockData.footer;
-  const { textSoon, features } =  mockData.soon;
+  const { logo, buttons } = mockData.header ?? {};
+  const { title, subtitle, description } = mockData.slider ?? {};
+  const { coreValue, listValues } = mockData.values ?? {};
+  const { contentBuyer, contentSupplier } = mockData.clients ?? {};
+  const { imageNews, text, buttonNews } =  mockData.news ?? {};
+  const { image, navigationLinks, legalLinks } =  mockData.footer ?? {};
+  const { textSoon, features } =  mockData.soon ?? {};
 
   const menuItems = buttons[0];
   const buttonRegister = buttons[1];
