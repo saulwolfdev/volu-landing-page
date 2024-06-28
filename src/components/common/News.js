@@ -25,27 +25,27 @@ const Container = styled.div`
   @media (min-width: 320px) {
     grid-template-columns: 100%;
     /* margin: 0% 3%; */
-    height: 80%;
+    height: 70%;
   }
   @media (min-width: 500px) {
     grid-template-columns: 100%;
     /* margin: 0% 3%; */
-    height: 80%;
+    height: 70%;
   }
   @media (min-width: 900px) {
     grid-template-columns: 100%;
-    height: 80%;
+    height: 70%;
   }
   @media (min-width: 1200px) {
     grid-template-columns: 55.6% 44.4%;
-    height: 51.4%;
+    height: 44%;
     width: 1440px;
     top: 7%;
   }
   @media (min-width: 1920px) {
     grid-template-columns: 55.6% 44.4%;
     width: 1440px;
-    height: 51.4%;
+    height: 40%;
     top: 7%;
   }
 `;
@@ -137,6 +137,7 @@ const Image = styled.img`
     height: 45%;
     right: 50%;
     left: 50%;
+    top: 0px;
     transform: translateX(-50%);
   }
   @media (min-width: 500px) {
@@ -144,6 +145,7 @@ const Image = styled.img`
     height: 45%;
     right: 50%;
     left: 50%;
+    top: 0px;
     transform: translateX(-50%);
   }
   @media (min-width: 900px) {
@@ -151,23 +153,25 @@ const Image = styled.img`
     height: 45%;
     right: 50%;
     left: 50%;
+    top: 0px;
     transform: translateX(-50%);
   }
   @media (min-width: 1200px) {
-    width: auto;
+    width: 85%;
     height:auto;
     position: absolute;
-    right: 2%;
+    right: -700px;
     left: auto;
     transform: none;
     bottom: 0px;
+    top: -480px;
   }
   @media (min-width: 1920px) {
         height: auto;
         position: absolute;
         right: -700px;
         width: 85%;
-    top: -550px;
+    top: -480px;
   }
 `;
 
@@ -186,6 +190,14 @@ const Title = styled.h1`
   @media (min-width: 900px) {
     font-size: 3rem;
     line-height: 50px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  @media (min-width: 1920px) {
+    font-size: 2rem;
+    line-height: 40px;
   }
 `;
 const CashContent = styled.div`

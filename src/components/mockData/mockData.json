@@ -186,8 +186,46 @@
           }
         ]
       }
-    }
-   
+    },
+   "rateData":{
+    "title3": "Transparencia en cifras",
+    "subtitle3": "Nuestro modelo de tarificación es justo y claro, sin costos ocultos. Las tarifas se adaptan al volumen de la licitación.",
+    "rangeTitle": "Rango de licitación (MXN)",
+    "ranges": [
+      "$0 - $99.999",
+      "$100.000 - $999.999",
+      "$1.000.000 - $9.999.999",
+      "$10.000.000 en adelante"
+    ],
+    "rateTitle": "Tarifa de aplicación (MXN)",
+    "rates": [
+      "$10",
+      "$100",
+      "$1.000",
+      "$5.000"
+    ]
+   },
+   "verifiedStatus": {
+    "title4": "Eleva tu estatus como proveedor verificado",
+    "subtitle4": "Al convertirte en un proveedor verificado con volu, no solo aumentas tu visibilidad sino que también consolidas la confianza con los compradores",
+    "cards": [
+      {
+        "title": "Seguridad de transacciones",
+        "subtitle": "Ser un proveedor verificado transmite fiabilidad a los compradores potenciales.",
+        "iconPath": "security.svg"
+     },
+     {
+        "title": "Informes personalizados",
+        "subtitle": "Recibe análisis detallados para afinar tu estrategia comercial.",
+        "iconPath": "workerForm.svg"
+     },
+      {
+        "title": "Alianza estratégica",
+        "subtitle": "Conviértete en un colaborador esencial de volu, abriendo puertas a nuevas posibilidades de negocio.",
+        "iconPath": "handshake2.svg"
+     }
+    ]   
+   }
   },
   "soon": {
     "textSoon": {

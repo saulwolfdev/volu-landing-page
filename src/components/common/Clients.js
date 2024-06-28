@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Tabs, CardList } from "components/uiElements";
-
-
+import CardRates from "components/uiElements/card/CardRates";
+import VerifiedStatus from "components/uiElements/card/VerifiedStatus";
 
 const ContainerCards = styled.div`
  width: 100%;
@@ -105,10 +105,6 @@ margin: 0 auto;
   }
 
 `;
-
-
-
-
 
 const Title = styled.h1`
   font-size: 1.8rem;
@@ -249,7 +245,7 @@ const ContainerImageSupplier = styled.img`
     display: block;
     width: auto;
     height: auto;
-
+    margin-top: 102px;
 `
 
 const TitleTwo = styled.h2`
@@ -268,18 +264,34 @@ const ContainerClientsFeatures = styled.ul`
   display: block;
 `;
 
+const ContentCardSupplier= styled.div`
+  display: grid;
+  justify-items: flex-end;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 80px;
 
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`
+
+const ContentCardRates = styled.div`
+margin-top: 80px;
+`
 export const Clients = ({clients}) => {
 
-  const { contentBuyer, contentSupplier } = clients
+  const { contentBuyer, contentSupplier, rateData, verifiedStatus } = clients
 
   const buyerTitle = contentBuyer.title
   const buyerSubtitle = contentBuyer.subtitle
 
   const supplierTitle = contentSupplier.title
   const supplierSubtitle = contentSupplier.subtitle
-  console.log("contentBuyer",contentBuyer)
-console.log("contentSupplier",contentSupplier)
+
+  console.log("verifiedStatus",verifiedStatus)
+const { title3, subtitle3, rangeTitle, ranges, rateTitle, rates } = rateData;
+const { title4, subtitle4, cards } = verifiedStatus;
   const tabs = [
     {
       label: 'Comprador',
@@ -303,7 +315,7 @@ console.log("contentSupplier",contentSupplier)
                   description={step.description}
                 />
               ))}
-          </ContainerClientsFeatures>
+          </ContainerClientsFeatures>          
         </ContaninerClientBuyer>
       </ContainerTabsClients>
     },
@@ -323,15 +335,32 @@ console.log("contentSupplier",contentSupplier)
           <Subtible>
             {contentSupplier.subtitle2}
           </Subtible>
-          {contentSupplier.listSupplier.access.map((step) => (
-                <CardList
-                  key={step.id}
-                  icon={step.iconPath}
-                  title={step.title}                  
-                  description={step.description}
-                />
-              ))}
-
+          <ContentCardSupplier>
+            {contentSupplier.listSupplier.access.map((step) => (
+                  <CardList
+                    key={step.id}
+                    icon={step.iconPath}
+                    title={step.title}                  
+                    description={step.description}
+                  />
+                ))}
+          </ContentCardSupplier>
+          <ContentCardRates>
+            <CardRates 
+              title3={title3}
+              subtitle3={subtitle3}
+              rangeTitle={rangeTitle}
+              ranges={ranges}
+              rateTitle={rateTitle}
+              rates={rates}
+            />
+          </ContentCardRates>
+          <VerifiedStatus
+            title={title4}
+            subtitle={subtitle4}
+            cards={cards} 
+            iconPath={cards[0]?.iconPath} 
+          />
           </ContentListSupplier>
       </ContainerTabsClients>
     }
