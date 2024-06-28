@@ -2,17 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  text-align: center;
-  background-color: #f7f7f7;
+  text-align: center;  
   padding: 20px;
 `;
 
 const Title = styled.h2`
-  color: #333;
+    font-size: 1.6rem;
+    line-height: 45px;
+    color: #181919;
+    margin-bottom: 10px;
 `;
 
 const Subtitle = styled.p`
-  color: #666;
+    font-size: 1.1rem;
+    line-height: 24px;
+    color: rgba(54, 56, 55, 0.6);
+    margin-bottom: 48px;
 `;
 
 const ItemsContainer = styled.div`
@@ -26,25 +31,31 @@ const Item = styled.div`
   padding: 20px;
   border-radius: 8px;
   width: 30%;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;  
+  text-align: left;
 `;
 
 const Icon = styled.img`
   width: 50px;
   height: 50px;
-  margin-bottom: 10px;
+  margin-right: 20px;
+`;
+
+const ItemTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const ItemTitle = styled.h3`
-  margin-top: 10px;
   font-size: 18px;
-  color: #333;
+  color: #181919;
+  padding-bottom: 8px;
 `;
 
-const ItemSubtitle = styled.p`
-  font-size: 14px;
-  color: #666;
+const ItemSubtitle = styled.p`  
+  font-size: 1.1rem;  
+  color: rgba(54, 56, 55, 0.6);
 `;
 
 const VerifiedStatus = ({ title, subtitle, cards }) => {
@@ -56,8 +67,10 @@ const VerifiedStatus = ({ title, subtitle, cards }) => {
         {cards.map((card, index) => (
           <Item key={index}>
             <Icon src={`images/${card.iconPath}`} alt={card.title} />
-            <ItemTitle>{card.title}</ItemTitle>
-            <ItemSubtitle>{card.subtitle}</ItemSubtitle>
+            <ItemTextContainer>
+              <ItemTitle>{card.title}</ItemTitle>
+              <ItemSubtitle>{card.subtitle}</ItemSubtitle>
+            </ItemTextContainer>
           </Item>
         ))}
       </ItemsContainer>
